@@ -1,13 +1,12 @@
-
-%------------------------------------------------------------------------------------------------------------
-%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for global optimization.
-%  
-%  Author: Boyu Ma*, Jiaxiao Shi*, Yiming Ji, Zhengpu Wang
-%  
-%  Programmer: Boyu Ma (mby9702@163.com), Jiaxiao Shi (jiaxiao364@gmail.com)
+%----------------------------------------------------------------------------------------------------------------------
+%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization.
+%
+%  Authors: Boyu Ma* (boyu.ma@ntu.edu.sg), Jiaxiao Shi* (jiaxiao.shi@ntu.edu.sg), Yiming Ji, Zhengpu Wang
+%
+%  Project Page: https://jxxsteven7.github.io/ECO-Optimizer/
 %                                                                   
 %  Developed in Matlab2023a                                                                                                     
-%------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------
 
 % This function implements the roulette.
 % Fit: fitness value array required for the roulette

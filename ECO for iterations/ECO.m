@@ -1,12 +1,12 @@
-%------------------------------------------------------------------------------------------------------------
-%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for global optimization.
-%  
-%  Author: Boyu Ma*, Jiaxiao Shi*, Yiming Ji, Zhengpu Wang
-%  
-%  Programmer: Boyu Ma (mby9702@163.com), Jiaxiao Shi (jiaxiao364@gmail.com)
+%----------------------------------------------------------------------------------------------------------------------
+%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization.
+%
+%  Authors: Boyu Ma* (boyu.ma@ntu.edu.sg), Jiaxiao Shi* (jiaxiao.shi@ntu.edu.sg), Yiming Ji, Zhengpu Wang
+%
+%  Project Page: https://jxxsteven7.github.io/ECO-Optimizer/
 %                                                                   
 %  Developed in Matlab2023a                                                                                                     
-%------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------
 
 function [Best_pos, Best_fit, Convergence_curve] = ECO(Pop_size, Max_it, Low, Up, dim, fobj)
 
@@ -15,6 +15,10 @@ P_producer = 0.2;
 P_herbivore = 0.3;
 P_carnivore = 0.3;
 % P_omnivore = 0.2;
+
+% Decompose probabilities
+P_opt = 0.6;
+P_loc = 0.6
 
 % Number of producers, herbivores, carnivores, omnivores, and decomposers
 Pro_num = round(Pop_size * P_producer);
@@ -116,12 +120,12 @@ for It = 1:Max_it
     
     for i = 1:Dec_num
         % Optimal decomposition
-        if rand < 0.5
+        if rand < P_opt
             Bestpos_neihood = Decomposer_pos(min_num,:).*rand(1,dim);
             Dec_new = Bestpos_neihood + (0.4*rand - 0.2).*(Bestpos_neihood - Decomposer_pos(i,:));
         % Random decomposition
         else
-            if rand < 0.5        
+            if rand < P_loc       
                 % Local random decomposition
                 dis = norm(Decomposer_pos(min_num,:) - Decomposer_pos(i,:));
                 rand_vec = 2*rand(1, dim) - 1;
