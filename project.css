@@ -182,9 +182,12 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
 .copy-button { position: absolute; top: 13px; right: 13px; padding: 7px 9px; color: var(--ink); background: transparent; border: 1px solid rgba(24, 61, 54, .45); font-family: "DM Mono", monospace; font-size: .64rem; cursor: pointer; }
 
 .project-footer { display: flex; justify-content: space-between; width: min(880px, calc(100% - 64px)); margin: 30px auto 0; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--body); font-family: "DM Mono", monospace; font-size: .67rem; }
+.article-page .project-footer { width: 100%; }
 .project-footer p { margin: 0; }
 .project-footer a { display: inline-flex; align-items: center; gap: 6px; color: var(--clay); }
 .footer-github-logo { width: 14px; height: 14px; }
+.project-credit { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
+.hero-footer { position: absolute; right: 0; bottom: 24px; left: 0; width: 100%; margin: 0; }
 
 /* These rules must follow the section layouts so inactive pages stay hidden. */
 .page-section { display: none; }
@@ -398,6 +401,7 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   .hero { grid-template-columns: 1fr; width: min(100% - 36px, 1240px); min-height: 0; padding: 66px 0 54px; }
   .hero-art { min-height: 370px; order: -1; }
   .hero-art img { width: min(80%, 420px); }
+  .hero-footer { position: static; grid-column: 1 / -1; width: 100%; margin-top: 15px; }
   .authors { margin-top: 42px; }
   .statement, .mechanisms, .evaluation, .citation { width: min(100% - 36px, 1240px); }
   .statement, .section-heading, .evaluation, .citation { grid-template-columns: 1fr; gap: 25px; }
@@ -421,6 +425,8 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   .resource-band { align-items: flex-start; flex-direction: column; padding: 36px 18px; }
   .resource-band div { justify-content: flex-start; }
   .project-footer { width: min(100% - 36px, 880px); flex-direction: column; gap: 9px; }
+  .article-page .project-footer { width: 100%; }
+  .project-credit { justify-content: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
