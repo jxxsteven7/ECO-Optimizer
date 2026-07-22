@@ -89,33 +89,36 @@
       <div class="article-page">
         <p class="section-index">02 / Method</p>
         <div class="article-intro">
-          <p>ECO simulates the iterative update strategies of producers, consumers, and decomposers. The population is initialized in the feasible space and updated through a repeated ecological cycle until the termination criterion is reached.</p>
+          <p>ECO models population evolution as an ecological cycle. Producers, consumers, and decomposers perform complementary updates, allowing the search to alternate between broad exploration and focused exploitation until the function-evaluation budget is exhausted.</p>
         </div>
 
         <section class="article-section">
           <h2 id="method-title">Population initialization</h2>
           <p>The population is divided into producers, herbivores, carnivores, and omnivores. Their proportions satisfy <em>P<sub>Pro</sub> + P<sub>Her</sub> + P<sub>Car</sub> + P<sub>Omn</sub> = 1</em>, and individuals are randomly initialized within the constrained search space.</p>
+          <p>The first three group sizes are obtained from their prescribed proportions, while the omnivore group occupies the remaining population. This composition provides distinct ecological roles without introducing additional population-size parameters.</p>
         </section>
 
         <section class="article-section">
           <h2>Producer strategy</h2>
-          <p>Producers model nutrient absorption and act as a source of useful population information. Their update strategy uses guided information to support the refinement of promising search regions.</p>
+          <p>Producers represent the foundation of the ecological system and absorb information recycled by decomposers. Their update strategy retains useful search information and refines promising regions, providing high-quality candidate solutions for the consumer groups.</p>
         </section>
 
         <section class="article-section">
           <h2>Consumer strategy</h2>
-          <p>Consumers are divided into herbivores, carnivores, and omnivores. These groups apply different predation relationships, which creates varied information-exchange paths and helps the population search beyond a single local pattern.</p>
+          <p>Consumers are divided into herbivores, carnivores, and omnivores. Herbivores are guided by selected producers, carnivores by selected herbivores, and omnivores by a mixture of producers, herbivores, and carnivores.</p>
+          <p>Prey is selected by roulette-wheel sampling, so lower-fitness individuals are more likely to guide the update while multiple elite candidates remain available. These different predation paths diversify information exchange and reduce reliance on a single search direction.</p>
         </section>
 
         <section class="article-section">
           <h2>Consumer-prey dynamics</h2>
-          <p>The predation factor determines the consumer-prey relationship and changes during the search. This mechanism adjusts the balance between exploration and exploitation as the iteration progresses.</p>
+          <p>The predation factor <em>G</em> determines the consumer-prey relationship. Values outside the local predation interval encourage consumers to leave the current target and explore a broader region, whereas values in the local interval promote exploitation around the selected prey.</p>
+          <p>As the iteration progresses, the random range of <em>G</em> contracts toward one. The mechanism therefore transitions from diverse early exploration to stable local refinement near high-quality solutions.</p>
           <div class="method-visuals">
-            <figure>
+            <figure class="method-figure-square">
               <img src="assets/eco_exp_param.png" alt="Consumer-prey relationship governed by the predation factor">
               <figcaption>Fig. 2. Consumer-prey relationship used in ECO.</figcaption>
             </figure>
-            <figure>
+            <figure class="method-figure-wide">
               <img src="assets/eco_exp_it.png" alt="Iteration-dependent variation of the ECO predation factor">
               <figcaption>Fig. 3. Iteration-dependent variation of the predation factor.</figcaption>
             </figure>
@@ -124,12 +127,13 @@
 
         <section class="article-section">
           <h2>Decomposer strategy</h2>
-          <p>After each ecological cycle, decomposers recycle information through optimal, local-random, and global-random decomposition. These mechanisms retain useful information while introducing new search directions when needed.</p>
+          <p>After each ecological cycle, decomposers recycle population information through optimal, local-random, and global-random decomposition. Optimal decomposition samples near the current best solution to strengthen exploitation.</p>
+          <p>Local-random decomposition searches around the current individual with a radius determined by its distance from the best solution, while global-random decomposition uses a random walk to generate distant search directions. Their probabilities are controlled by <em>p<sub>opt</sub></em> and <em>p<sub>loc</sub></em>.</p>
         </section>
 
         <section class="article-section">
           <h2>ECO workflow</h2>
-          <p>At every iteration, the population undergoes ecological interaction, decomposition, and selection. Improved individuals are retained, and the process continues until the available function evaluations are exhausted.</p>
+          <p>At every iteration, producers, consumers, and decomposers are updated in sequence. New candidates are evaluated, the best information is retained, and the ecological cycle is repeated until the available function evaluations are exhausted.</p>
           <figure class="article-figure figure-wide">
             <img src="assets/eco_flowchart.png" alt="Flowchart of the ECO optimization workflow">
             <figcaption>Fig. 4. Main workflow of the Ecological Cycle Optimizer.</figcaption>

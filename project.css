@@ -334,9 +334,11 @@ footer a { color: var(--clay); }
 .article-figure img { display: block; width: 100%; height: auto; background: transparent; }
 .article-figure.figure-medium { max-width: 620px; }
 .article-figure.figure-wide { max-width: 820px; }
-.method-visuals { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 22px; margin-top: 22px; }
+.method-visuals { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 22px; }
 .method-visuals figure { margin: 0; }
 .method-visuals img { display: block; width: 100%; height: auto; }
+.method-visuals .method-figure-square { max-width: 500px; }
+.method-visuals .method-figure-wide { max-width: 720px; }
 .engineering-cases { display: grid; gap: 32px; margin-top: 26px; }
 .engineering-case { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 24px; align-items: center; padding-top: 24px; border-top: 1px solid var(--line); }
 .engineering-case figure { margin: 0; }
@@ -380,7 +382,6 @@ footer a { color: var(--clay); }
   .article-intro p, .article-section p { font-size: .9rem; }
   .article-section { margin-bottom: 34px; }
   .content-page .experiment-visuals { grid-template-columns: 1fr; }
-  .method-visuals { grid-template-columns: 1fr; }
   .engineering-case { grid-template-columns: 1fr; }
   .engineering-results table { font-size: clamp(.42rem, 1.3vw, .58rem); }
 }
