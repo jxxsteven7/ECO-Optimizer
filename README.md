@@ -8,11 +8,11 @@
   <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="https://img.shields.io/badge/MATLAB-File%20Exchange-ED6A3A?style=for-the-badge" alt="MATLAB File Exchange"></a>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://arxiv.org/abs/2508.20458">Paper</a> &nbsp;|&nbsp;
   <a href="https://jxxsteven7.github.io/ECO-Optimizer/">Project page</a> &nbsp;|&nbsp;
   <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco">MATLAB File Exchange</a>
-</p>
+</p> -->
 
 **Boyu Ma**<sup>1,2,*</sup>, **Jiaxiao Shi**<sup>1,2,*</sup>, **Yiming Ji**<sup>1</sup>, and **Zhengpu Wang**<sup>1</sup>
 
@@ -25,16 +25,21 @@
 <a id="contents"></a>
 ## 📚 Contents
 
-- [Overview](#overview)
-- [Method at a Glance](#method-at-a-glance)
-- [Repository Structure](#repository-structure)
-- [Requirements](#requirements)
-- [Quick Start](#quick-start)
-- [Reproducing the Included Benchmark Runs](#reproducing-the-included-benchmark-runs)
-- [Using ECO on a Custom Problem](#using-eco-on-a-custom-problem)
-- [Experimental Scope in the Paper](#experimental-scope-in-the-paper)
-- [Citation](#citation)
-- [Contact](#contact)
+- [Ecological Cycle Optimizer (ECO)](#ecological-cycle-optimizer-eco)
+  - [📚 Contents](#-contents)
+  - [🌍 Overview](#-overview)
+  - [🧬 Method at a Glance](#-method-at-a-glance)
+  - [🗂️ Repository Structure](#️-repository-structure)
+  - [🛠️ Requirements](#️-requirements)
+  - [🚀 Quick Start](#-quick-start)
+  - [🔁 Reproducing the Included Benchmark Runs](#-reproducing-the-included-benchmark-runs)
+    - [Function-evaluation version](#function-evaluation-version)
+    - [Iteration-based version](#iteration-based-version)
+    - [Outputs](#outputs)
+  - [🧩 Using ECO on a Custom Problem](#-using-eco-on-a-custom-problem)
+  - [📊 Experimental Scope in the Paper](#-experimental-scope-in-the-paper)
+  - [📖 Citation](#-citation)
+  - [✉️ Contact](#️-contact)
 
 <a id="overview"></a>
 ## 🌍 Overview
@@ -212,11 +217,11 @@ For methodological details, experimental settings, and complete results, please 
 If you use ECO or this implementation in your research, please cite:
 
 ```bibtex
-@article{ma2025eco,
+@article{2026eco,
   title   = {Ecological Cycle Optimizer: A Novel Nature-Inspired Metaheuristic Algorithm for Global Optimization},
   author  = {Ma, Boyu and Shi, Jiaxiao and Ji, Yiming and Wang, Zhengpu},
   journal = {arXiv preprint arXiv:2508.20458},
-  year    = {2025}
+  year    = {2026}
 }
 ```
 
