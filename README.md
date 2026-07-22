@@ -180,6 +180,8 @@ The paper evaluates ECO in three stages:
 
 For methodological details, experimental settings, and complete results, please see the [paper](https://arxiv.org/abs/2508.20458) and the [project page](https://jxxsteven7.github.io/ECO-Optimizer/).
 
+If this project is useful for your research, please consider giving [ECO-Optimizer](https://github.com/jxxsteven7/ECO-Optimizer) a star ⭐.
+
 <a id="citation-and-contact"></a>
 ## 📖 Citation and Contact
 

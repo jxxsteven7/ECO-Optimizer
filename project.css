@@ -181,9 +181,10 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
 .citation pre { margin: 0; overflow-x: auto; color: var(--ink-strong); font-family: "DM Mono", monospace; font-size: .72rem; line-height: 1.75; white-space: pre-wrap; }
 .copy-button { position: absolute; top: 13px; right: 13px; padding: 7px 9px; color: var(--ink); background: transparent; border: 1px solid rgba(24, 61, 54, .45); font-family: "DM Mono", monospace; font-size: .64rem; cursor: pointer; }
 
-footer { grid-column: 1 / -1; display: flex; justify-content: space-between; width: 100%; margin-top: 30px; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--body); font-family: "DM Mono", monospace; font-size: .67rem; }
-footer p { margin: 0; }
-footer a { color: var(--clay); }
+.project-footer { display: flex; justify-content: space-between; width: min(880px, calc(100% - 64px)); margin: 30px auto 0; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--body); font-family: "DM Mono", monospace; font-size: .67rem; }
+.project-footer p { margin: 0; }
+.project-footer a { display: inline-flex; align-items: center; gap: 6px; color: var(--clay); }
+.footer-github-logo { width: 14px; height: 14px; }
 
 /* These rules must follow the section layouts so inactive pages stay hidden. */
 .page-section { display: none; }
@@ -419,7 +420,7 @@ footer a { color: var(--clay); }
   .evaluation { grid-template-areas: "copy" "visuals" "track" "resources"; }
   .resource-band { align-items: flex-start; flex-direction: column; padding: 36px 18px; }
   .resource-band div { justify-content: flex-start; }
-  footer { flex-direction: column; gap: 9px; }
+  .project-footer { width: min(100% - 36px, 880px); flex-direction: column; gap: 9px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
