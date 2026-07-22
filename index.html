@@ -57,89 +57,95 @@
       </div>
     </section>
 
-    <section class="statement page-section" id="overview" aria-labelledby="overview-title">
-      <div class="overview-lead">
-        <p class="section-index">01 / Overview</p>
-        <p class="section-kicker">A biological metaphor for global search</p>
-        <h2 id="overview-title">Search as a living<br>system of <em>exchange.</em></h2>
-        <p class="section-summary">ECO treats an optimization population as a connected ecosystem. Useful search information flows through ecological interactions, while material cycling renews diversity when the search needs a new direction.</p>
-        <div class="overview-claims">
-          <article><span>Problem</span><p>Complex, nonlinear and non-convex global optimization.</p></article>
-          <article><span>Idea</span><p>Model energy flow and material cycling as coordinated search operators.</p></article>
+    <section class="statement page-section content-page" id="overview" aria-labelledby="overview-title">
+      <div class="article-page">
+        <div class="article-intro">
+          <p>ECO is a nature-inspired metaheuristic algorithm for complex nonlinear and non-convex global optimization. It models the population as an ecological system, where ecological interactions provide complementary search behaviours instead of relying on a single update rule.</p>
         </div>
-      </div>
-      <figure class="overview-figure">
-        <div class="figure-frame"><img src="assets/eco_ecosystem.jpg" alt="ECO ecosystem schematic showing producers, consumers, decomposers, and nutrient cycling"></div>
-        <figcaption><span>Ecological analogy</span><p>Producers, consumers, decomposers, and nutrients form a closed information cycle.</p></figcaption>
-      </figure>
-      <div class="overview-principles" aria-label="ECO design principles">
-        <article><strong>01</strong><div><h3>Directed information</h3><p>Energy represents solution quality, allowing effective candidates to guide the population.</p></div></article>
-        <article><strong>02</strong><div><h3>Role diversity</h3><p>Different ecological roles create complementary update trajectories.</p></div></article>
-        <article><strong>03</strong><div><h3>Continuous renewal</h3><p>Decomposition recycles information to sustain a dynamic search balance.</p></div></article>
+
+        <section class="article-section">
+          <h2 id="overview-title">Ecological inspiration</h2>
+          <p>In an ecosystem, producers, consumers, decomposers, and the inorganic environment are connected by energy flow and material cycling. Producers supply organic matter, consumers transfer energy through predation, and decomposers return biological remains to the nutrient pool. ECO translates this coupled cycle into an iterative optimization process.</p>
+          <figure class="article-figure figure-medium">
+            <img src="assets/eco_ecosystem.jpg" alt="ECO ecosystem schematic showing producers, consumers, decomposers, and nutrient cycling">
+            <figcaption>Fig. 1. Ecological relationships used as the inspiration for ECO.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section">
+          <h2>From ecology to optimization</h2>
+          <p>Each candidate solution is treated as an organism, and its fitness is inversely related to its energy. Better solutions are retained through survival of the fittest, while ecological interactions generate new candidates. In this way, energy flow guides useful information through the population and material cycling renews information that may otherwise become stagnant.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>What ECO is designed to study</h2>
+          <p>The paper first determines a stable internal configuration through parameter sensitivity analysis. ECO is then assessed on the CEC-2014, CEC-2017, and CEC-2020 numerical benchmark suites, followed by five constrained engineering design problems from CEC-2020-RW.</p>
+        </section>
       </div>
     </section>
 
-    <section class="mechanisms page-section" id="method" aria-labelledby="method-title">
-      <div class="section-heading">
-        <div><p class="section-index">02 / Method</p><p class="section-kicker">Ecological Cycle Optimizer</p></div>
-        <div><h2 id="method-title">Three ecological roles,<br>one coordinated search.</h2><p class="section-summary">Each iteration couples information supply, predation-guided interaction, and decomposition-based renewal. The resulting cycle continuously adapts the balance between broad exploration and focused exploitation.</p></div>
-      </div>
-      <div class="mechanism-grid">
-        <article class="mechanism-card producer">
-          <span class="card-number">01</span>
-          <h3>Producers</h3>
-          <p>Producers absorb nutrients and provide candidate information that supports population evolution.</p>
-          <span class="role-tag">Information supply / exploitation</span>
-        </article>
-        <article class="mechanism-card consumer">
-          <span class="card-number">02</span>
-          <h3>Consumers</h3>
-          <p>Herbivores, carnivores, and omnivores use distinct predation behaviours to exchange and refine search information.</p>
-          <span class="role-tag">Predation interaction / adaptation</span>
-        </article>
-        <article class="mechanism-card decomposer">
-          <span class="card-number">03</span>
-          <h3>Decomposers</h3>
-          <p>Optimal, local-random, and global-random decomposition recycle information and restore diversity.</p>
-          <span class="role-tag">Information renewal / exploration</span>
-        </article>
-      </div>
-      <div class="method-bottom">
-        <div class="workflow-steps" aria-label="ECO iteration workflow">
-          <span>Initialize</span><i></i><span>Interact</span><i></i><span>Decompose</span><i></i><span>Preserve better solutions</span>
+    <section class="mechanisms page-section content-page" id="method" aria-labelledby="method-title">
+      <div class="article-page">
+        <div class="article-intro">
+          <p>ECO simulates the iterative update strategies of producers, consumers, and decomposers. The population is initialized in the feasible space and updated through a repeated ecological cycle until the termination criterion is reached.</p>
         </div>
-        <figure class="workflow-figure"><img src="assets/eco_flowchart.jpg" alt="Flowchart of the ECO optimization workflow"><figcaption>One ECO iteration</figcaption></figure>
+
+        <section class="article-section">
+          <h2 id="method-title">Population initialization</h2>
+          <p>The population is divided into producers, herbivores, carnivores, and omnivores. Their proportions satisfy <em>P<sub>Pro</sub> + P<sub>Her</sub> + P<sub>Car</sub> + P<sub>Omn</sub> = 1</em>, and individuals are randomly initialized within the constrained search space.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Producer strategy</h2>
+          <p>Producers model nutrient absorption and act as a source of useful population information. Their update strategy uses guided information to support the refinement of promising search regions.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Consumer strategy</h2>
+          <p>Consumers are divided into herbivores, carnivores, and omnivores. These groups apply different predation relationships, which creates varied information-exchange paths and helps the population search beyond a single local pattern.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Decomposer strategy</h2>
+          <p>After each ecological cycle, decomposers recycle information through optimal, local-random, and global-random decomposition. These mechanisms retain useful information while introducing new search directions when needed.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>ECO workflow</h2>
+          <p>At every iteration, the population undergoes ecological interaction, decomposition, and selection. Improved individuals are retained, and the process continues until the available function evaluations are exhausted.</p>
+          <figure class="article-figure figure-wide">
+            <img src="assets/eco_flowchart.jpg" alt="Flowchart of the ECO optimization workflow">
+            <figcaption>Fig. 2. Main workflow of the Ecological Cycle Optimizer.</figcaption>
+          </figure>
+        </section>
       </div>
     </section>
 
-    <section class="evaluation page-section" id="experiments" aria-labelledby="evaluation-title">
-      <div class="evaluation-copy">
-        <p class="section-index">03 / Experiments</p>
-        <p class="section-kicker">From internal settings to application</p>
-        <h2 id="evaluation-title">Evidence across<br>three <em>scales.</em></h2>
-        <p>Our evaluation follows a deliberate progression: establish a stable internal configuration, test performance against state-of-the-art metaheuristics, and validate ECO on constrained engineering design problems.</p>
+    <section class="evaluation page-section content-page" id="experiments" aria-labelledby="evaluation-title">
+      <div class="article-page">
+      <div class="article-intro">
+        <p id="evaluation-title">The experimental study is organized from internal parameter selection to numerical benchmarking and engineering validation. All numerical tests follow the settings of the corresponding benchmark technical reports, and repeated runs are assessed by solution quality and statistical ranking.</p>
         <a class="text-link" href="https://arxiv.org/abs/2508.20458" target="_blank" rel="noreferrer">Explore the full experimental study <span aria-hidden="true">→</span></a>
       </div>
+      <section class="article-section">
+        <h2>Parameter sensitivity analysis</h2>
+        <p>Population composition and decomposition probabilities are investigated separately on 23 classic optimization functions. The population proportions are restricted to balanced ecological configurations, and the candidate settings are ranked from repeated optimization runs.</p>
+        <p>The selected default configuration is <em>P<sub>Pro</sub> = 0.2, P<sub>Her</sub> = 0.3, P<sub>Car</sub> = 0.3, P<sub>Omn</sub> = 0.2</em>, with <em>p<sub>opt</sub> = 0.6</em> and <em>p<sub>loc</sub> = 0.6</em>. It is adopted in the subsequent experiments.</p>
       <div class="experiment-visuals">
         <figure><img src="assets/pop-sensitivity.png" alt="Population proportion sensitivity ranks across 23 benchmark functions"><figcaption>Population structure</figcaption></figure>
         <figure><img src="assets/prob-sensitivity.png" alt="Decomposition probability sensitivity ranks across 23 benchmark functions"><figcaption>Decomposition probabilities</figcaption></figure>
       </div>
-      <div class="experiment-track" role="list" aria-label="Experimental design">
-        <article role="listitem">
-          <span class="experiment-number">01</span>
-          <div><h3>Parameter sensitivity</h3><p>Ten balanced population configurations and 25 decomposition-probability settings are ranked on 23 classic functions.</p></div>
-          <strong>23</strong>
-        </article>
-        <article role="listitem">
-          <span class="experiment-number">02</span>
-          <div><h3>Numerical benchmarking</h3><p>ECO is compared with a pool of 30 metaheuristic algorithms on CEC-2014 and CEC-2017, then with the leading competitors on CEC-2020.</p></div>
-          <strong>30</strong>
-        </article>
-        <article role="listitem">
-          <span class="experiment-number">03</span>
-          <div><h3>Engineering validation</h3><p>Five representative constrained design problems from CEC-2020-RW assess practical optimization capability.</p></div>
-          <strong>5</strong>
-        </article>
+      </section>
+      <section class="article-section">
+        <h2>Comparison with state-of-the-art algorithms</h2>
+        <p>ECO is first compared with a pool of 30 metaheuristic algorithms on CEC-2014 and CEC-2017. The leading algorithms are then selected for a more detailed evaluation on CEC-2020 across dimensions of 10, 30, 50, and 100.</p>
+        <p>The comparison records Min, Ave, and Std values from independent runs. Algorithms are ranked for each function by smaller Ave, followed by Min and Std, and their global performance is summarized using the Friedman mean rank.</p>
+      </section>
+      <section class="article-section">
+        <h2>Engineering validation</h2>
+        <p>Five representative constrained design problems from CEC-2020-RW are used to evaluate practical applicability: speed reducer design, tension/compression spring design, welded beam design, three-bar truss design, and gear train design.</p>
+        <p>These problems include coupled variables, engineering constraints, and different objective landscapes. They complement the numerical benchmarks by examining whether ECO can produce competitive feasible designs in application-oriented settings.</p>
+      </section>
       </div>
       <div class="resource-band" aria-label="Resources">
         <p>Ready to experiment with ECO?</p>
