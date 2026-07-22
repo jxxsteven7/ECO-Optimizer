@@ -80,7 +80,7 @@
 
         <section class="article-section">
           <h2>What ECO is designed to study</h2>
-          <p>The paper first determines a stable internal configuration through parameter sensitivity analysis. ECO is then assessed on the CEC-2014, CEC-2017, and CEC-2020 numerical benchmark suites, followed by five constrained engineering design problems from CEC-2020-RW.</p>
+          <p>The paper first determines a stable internal configuration through parameter sensitivity analysis. ECO is then assessed on the <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2014" target="_blank" rel="noreferrer">CEC-2014</a>, <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2017-BoundContrained" target="_blank" rel="noreferrer">CEC-2017</a>, and <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-Bound-Constrained-Opt-Benchmark" target="_blank" rel="noreferrer">CEC-2020</a> numerical benchmark suites, followed by five constrained engineering design problems from <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-RW-Constrained-Optimisation" target="_blank" rel="noreferrer">CEC-2020-RW</a>.</p>
         </section>
       </div>
     </section>
@@ -132,7 +132,7 @@
       </div>
       <section class="article-section">
         <h2>Parameter sensitivity analysis</h2>
-        <p>Population composition and decomposition probabilities are investigated separately on 23 classic optimization functions. The population proportions are restricted to balanced ecological configurations, and the candidate settings are ranked from repeated optimization runs.</p>
+        <p>Population composition and decomposition probabilities are investigated separately on <a class="benchmark-link" href="https://ieeexplore.ieee.org/document/771163" target="_blank" rel="noreferrer">23 classic optimization functions</a>. The population proportions are restricted to balanced ecological configurations, and the candidate settings are ranked from repeated optimization runs.</p>
         <p>The selected default configuration is <em>P<sub>Pro</sub> = 0.2, P<sub>Her</sub> = 0.3, P<sub>Car</sub> = 0.3, P<sub>Omn</sub> = 0.2</em>, with <em>p<sub>opt</sub> = 0.6</em> and <em>p<sub>loc</sub> = 0.6</em>. It is adopted in the subsequent experiments.</p>
       <div class="experiment-visuals">
         <figure><img src="assets/pop-sensitivity.png" alt="Population proportion sensitivity ranks across 23 benchmark functions"><figcaption>Population structure</figcaption></figure>
@@ -141,12 +141,12 @@
       </section>
       <section class="article-section">
         <h2>Comparison with state-of-the-art algorithms</h2>
-        <p>ECO is first compared with a pool of 30 metaheuristic algorithms on CEC-2014 and CEC-2017. The leading algorithms are then selected for a more detailed evaluation on CEC-2020 across dimensions of 10, 30, 50, and 100.</p>
+        <p>ECO is first compared with a pool of 30 metaheuristic algorithms on <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2014" target="_blank" rel="noreferrer">CEC-2014</a> and <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2017-BoundContrained" target="_blank" rel="noreferrer">CEC-2017</a>. The leading algorithms are then selected for a more detailed evaluation on <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-Bound-Constrained-Opt-Benchmark" target="_blank" rel="noreferrer">CEC-2020</a> across dimensions of 10, 30, 50, and 100.</p>
         <p>The comparison records Min, Ave, and Std values from independent runs. Algorithms are ranked for each function by smaller Ave, followed by Min and Std, and their global performance is summarized using the Friedman mean rank.</p>
       </section>
       <section class="article-section">
         <h2>Engineering validation</h2>
-        <p>Five representative constrained design problems from CEC-2020-RW are used to evaluate practical applicability: speed reducer design, tension/compression spring design, welded beam design, three-bar truss design, and gear train design.</p>
+        <p>Five representative constrained design problems from <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-RW-Constrained-Optimisation" target="_blank" rel="noreferrer">CEC-2020-RW</a> are used to evaluate practical applicability: speed reducer design, tension/compression spring design, welded beam design, three-bar truss design, and gear train design.</p>
         <p>These problems include coupled variables, engineering constraints, and different objective landscapes. They complement the numerical benchmarks by examining whether ECO can produce competitive feasible designs in application-oriented settings.</p>
       </section>
       </div>

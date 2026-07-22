@@ -23,6 +23,8 @@ body {
   line-height: 1.55;
 }
 a { color: inherit; text-decoration: none; }
+.benchmark-link { color: var(--clay); border-bottom: 1px solid currentColor; }
+.benchmark-link:hover { color: var(--green); }
 main { height: calc(100svh - 80px); overflow: hidden; }
 
 .site-header {

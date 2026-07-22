@@ -77,7 +77,9 @@ cd ./ECO for FEs
 cd./ECO for iterations  
 ```
 
-The scripts automatically create a local `results/` directory and process the 23 classic benchmark functions (`F1`-`F23`).
+The scripts automatically create a local `results/` directory and process the
+[23 classic benchmark functions](https://ieeexplore.ieee.org/document/771163)
+(`F1`-`F23`).
 
 
 
@@ -88,7 +90,8 @@ The scripts automatically create a local `results/` directory and process the 23
 
 ### Parameter settings
 
-The recommended default configuration, determined by parameter sensitivity analysis on 23 classic benchmark functions, is:
+The recommended default configuration, determined by parameter sensitivity
+analysis on [23 classic benchmark functions](https://ieeexplore.ieee.org/document/771163), is:
 
 ```matlab
 % Population probabilities
@@ -170,9 +173,9 @@ The MATLAB command window also reports the minimum, mean, and standard deviation
 
 The paper evaluates ECO in three stages:
 
-1. **Parameter sensitivity analysis** on 23 classic functions to select the default population proportions and decomposition probabilities.
-2. **Performance potential** against a 30-algorithm metaheuristic pool on CEC-2014 and CEC-2017, followed by detailed evaluation on CEC-2020.
-3. **Engineering validation** on five constrained design problems from CEC-2020-RW.
+1. **Parameter sensitivity analysis** on [23 classic functions](https://ieeexplore.ieee.org/document/771163) to select the default population proportions and decomposition probabilities.
+2. **Performance potential** against a 30-algorithm metaheuristic pool on [CEC-2014](https://github.com/P-N-Suganthan/CEC2014) and [CEC-2017](https://github.com/P-N-Suganthan/CEC2017-BoundContrained), followed by detailed evaluation on [CEC-2020](https://github.com/P-N-Suganthan/2020-Bound-Constrained-Opt-Benchmark).
+3. **Engineering validation** on five constrained design problems from [CEC-2020-RW](https://github.com/P-N-Suganthan/2020-RW-Constrained-Optimisation).
 
 For methodological details, experimental settings, and complete results, please see the [paper](https://arxiv.org/abs/2508.20458) and the [project page](https://jxxsteven7.github.io/ECO-Optimizer/).
 
