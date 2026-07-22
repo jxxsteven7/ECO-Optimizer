@@ -344,8 +344,9 @@ footer a { color: var(--clay); }
 .engineering-results { min-width: 0; }
 .engineering-results h3 { margin: 0 0 8px; font-family: "Playfair Display", serif; font-size: 1rem; }
 .engineering-results table { width: 100%; border-collapse: collapse; table-layout: fixed; font-family: "DM Mono", monospace; font-size: clamp(.34rem, .58vw, .48rem); line-height: 1.35; }
-.engineering-results th, .engineering-results td { padding: 3px 1px; border-bottom: 1px solid var(--line); text-align: center; white-space: nowrap; }
-.engineering-results thead th { border-top: 1px solid var(--ink); color: var(--ink); font-weight: 700; }
+.engineering-results th, .engineering-results td { padding: 3px 1px; text-align: center; white-space: nowrap; }
+.engineering-results thead th { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); color: var(--ink); font-weight: 700; }
+.engineering-results tbody tr:last-child th, .engineering-results tbody tr:last-child td { border-bottom: 1px solid var(--ink); }
 .engineering-results tbody th { font-family: "Playfair Display", serif; font-size: 1.05em; }
 .engineering-results th:first-child { width: 9%; text-align: left; }
 .article-figure figcaption,
