@@ -15,6 +15,7 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="ECO home"><span class="brand-mark">E</span><span>ECO</span></a>
     <nav aria-label="Primary navigation">
+      <a href="#home">Home</a>
       <a href="#overview">Overview</a>
       <a href="#method">Method</a>
       <a href="#experiments">Experiments</a>
@@ -24,7 +25,7 @@
   </header>
 
   <main id="top">
-    <section class="hero page-section is-active-page" aria-labelledby="hero-title">
+    <section class="hero page-section is-active-page" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Nature-inspired global optimization</p>
         <h1 id="hero-title">Ecological<br><em>Cycle</em> Optimizer</h1>
@@ -143,8 +144,7 @@
     const homeLink = document.querySelector('.brand');
 
     const showPage = (sectionId, updateHistory = true) => {
-      const targetPage = sectionId ? document.getElementById(sectionId) : homePage;
-      if (!targetPage) return;
+      const targetPage = document.getElementById(sectionId) || homePage;
 
       pages.forEach((page) => {
         page.classList.toggle('is-active-page', page === targetPage);
@@ -170,14 +170,14 @@
 
     homeLink.addEventListener('click', (event) => {
       event.preventDefault();
-      showPage('');
+      showPage('home');
     });
 
     window.addEventListener('popstate', () => {
       showPage(window.location.hash.slice(1), false);
     });
 
-    showPage(window.location.hash.slice(1), false);
+    showPage(window.location.hash.slice(1) || 'home', false);
   </script>
 </body>
 </html>
