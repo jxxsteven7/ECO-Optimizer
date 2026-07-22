@@ -290,6 +290,12 @@ footer a { color: var(--clay); }
 .content-page .section-index {
   margin: 0 0 18px;
   color: var(--clay);
+  font-family: "DM Mono", monospace;
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  line-height: 1.55;
+  text-transform: uppercase;
 }
 .article-intro {
   margin-bottom: 38px;
