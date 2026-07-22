@@ -2,10 +2,10 @@
 
 > A nature-inspired metaheuristic algorithm for nonlinear and non-convex global optimization.
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2508.20458"><img src="https://img.shields.io/badge/Paper-arXiv%3A2508.20458-B31B1B?style=for-the-badge" alt="Paper"></a>
-  <a href="https://jxxsteven7.github.io/ECO-Optimizer/"><img src="https://img.shields.io/badge/Project-Website-2E6F62?style=for-the-badge" alt="Project website"></a>
-  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="https://img.shields.io/badge/MATLAB-File%20Exchange-ED6A3A?style=for-the-badge" alt="MATLAB File Exchange"></a>
+<p>
+  <a href="https://arxiv.org/abs/2508.20458"><img src="assets/arxiv-logo.svg" width="18" alt="arXiv" align="absmiddle"> <img src="https://img.shields.io/badge/Paper-arXiv%3A2508.20458-B31B1B?style=for-the-badge" alt="Paper" align="absmiddle"></a>
+  <a href="https://jxxsteven7.github.io/ECO-Optimizer/"><img src="assets/website-logo.svg" width="18" alt="Website" align="absmiddle"> <img src="https://img.shields.io/badge/Project-Website-2E6F62?style=for-the-badge" alt="Project website" align="absmiddle"></a>
+  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="assets/matlab-logo.svg" width="18" alt="MATLAB" align="absmiddle"> <img src="https://img.shields.io/badge/MATLAB-File%20Exchange-ED6A3A?style=for-the-badge" alt="MATLAB File Exchange" align="absmiddle"></a>
 </p>
 
 <!-- <p align="center">
@@ -14,7 +14,8 @@
   <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco">MATLAB File Exchange</a>
 </p> -->
 
-**Boyu Ma**<sup>1,2,*</sup>, **Jiaxiao Shi**<sup>1,2,*</sup>, **Yiming Ji**<sup>1</sup>, and **Zhengpu Wang**<sup>1</sup>
+<!-- Replace the two .example URLs below with the authors' personal homepage URLs. -->
+<a href="https://boyu-ma-homepage.example"><strong>Boyu Ma</strong></a><sup>1,2,*</sup>, <a href="https://jiaxiao-shi-homepage.example"><strong>Jiaxiao Shi</strong></a><sup>1,2,*</sup>, **Yiming Ji**<sup>1</sup>, and **Zhengpu Wang**<sup>1</sup>
 
 <sup>1</sup> State Key Laboratory of Robotics and Systems, Harbin Institute of Technology, Harbin, China<br>
 <sup>2</sup> School of Mechanical and Aerospace Engineering, Nanyang Technological University, Singapore 639798, Singapore<br>
