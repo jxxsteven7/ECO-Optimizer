@@ -76,10 +76,10 @@ h1 em, h2 em { color: var(--clay); font-weight: 600; }
 .button-quiet { background: transparent; }
 .button-matlab { border-color: #b85e38; color: #8e3e25; background: #f7e7d1; }
 .button-matlab:hover { background: #f2d6b4; }
-.button-icon { width: 18px; height: 18px; flex: none; fill: currentColor; }
-.arxiv-icon { width: 19px; }
-.github-icon { width: 18px; }
-.matlab-icon { width: 21px; fill: #cf6b37; }
+.button-logo { display: block; width: 18px; height: 18px; flex: none; object-fit: contain; }
+.arxiv-logo { width: 17px; height: 20px; }
+.github-logo { width: 19px; height: 19px; }
+.matlab-logo { width: 20px; height: 20px; }
 .button-arrow { margin-left: 2px; font-family: "DM Mono", monospace; font-size: .9rem; line-height: 1; }
 .authors { margin: 62px 0 0; color: var(--ink); font-size: .84rem; line-height: 1.8; }
 .authors sup { color: var(--clay); font-weight: 700; }
