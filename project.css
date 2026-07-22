@@ -97,7 +97,6 @@ h1 em, h2 em { color: var(--clay); font-weight: 600; }
   min-height: calc(100svh - 80px);
   align-content: center;
   padding: 70px 0;
-  border-top: 1px solid var(--line);
 }
 h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
 .statement h2 { margin-bottom: 31px; }
