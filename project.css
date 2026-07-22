@@ -184,9 +184,8 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
 .project-footer { display: flex; justify-content: space-between; width: min(880px, calc(100% - 64px)); margin: 30px auto 0; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--body); font-family: "DM Mono", monospace; font-size: .67rem; }
 .article-page .project-footer { width: 100%; }
 .project-footer p { margin: 0; }
-.project-footer a { display: inline-flex; align-items: center; gap: 6px; color: var(--clay); }
-.footer-github-logo { width: 14px; height: 14px; }
-.project-credit { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
+.project-footer a { color: var(--clay); }
+.project-credit { text-align: right; }
 .hero-footer { position: absolute; right: 0; bottom: 24px; left: 0; width: 100%; margin: 0; }
 
 /* These rules must follow the section layouts so inactive pages stay hidden. */
@@ -426,7 +425,7 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   .resource-band div { justify-content: flex-start; }
   .project-footer { width: min(100% - 36px, 880px); flex-direction: column; gap: 9px; }
   .article-page .project-footer { width: 100%; }
-  .project-credit { justify-content: flex-start; }
+  .project-credit { text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
