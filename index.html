@@ -196,6 +196,113 @@
         <h2>Engineering validation</h2>
         <p>Five representative constrained design problems from <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-RW-Constrained-Optimisation" target="_blank" rel="noreferrer">CEC-2020-RW</a> are used to evaluate practical applicability: speed reducer design, tension/compression spring design, welded beam design, three-bar truss design, and gear train design.</p>
         <p>These problems include coupled variables, engineering constraints, and different objective landscapes. ECO attains the best overall rank among the evaluated algorithms, complementing the numerical tests with application-oriented validation.</p>
+        <div class="engineering-cases">
+          <article class="engineering-case">
+            <figure>
+              <img src="assets/eng_speed.png" alt="Speed reducer design problem">
+              <figcaption>Fig. 12. Speed reducer design.</figcaption>
+            </figure>
+            <div class="engineering-results">
+              <h3>RC15: Speed reducer</h3>
+              <table aria-label="Numerical results for the speed reducer design problem">
+                <thead><tr><th></th><th>ECO</th><th>FDB-AGDE</th><th>FDB-SFS</th><th>LRFDB-COA</th><th>L-SHADE</th><th>NSM-SFS</th></tr></thead>
+                <tbody>
+                  <tr><th><em>x</em><sub>1</sub></th><td>3.50000000</td><td>3.50000000</td><td>3.50000000</td><td>3.50000000</td><td>3.50000000</td><td>3.50000000</td></tr>
+                  <tr><th><em>x</em><sub>2</sub></th><td>0.70000000</td><td>0.70000000</td><td>0.70000000</td><td>0.70000000</td><td>0.70000000</td><td>0.70000000</td></tr>
+                  <tr><th><em>x</em><sub>3</sub></th><td>17.0000000</td><td>17.0000000</td><td>17.0000000</td><td>17.0000000</td><td>17.0000000</td><td>17.0000000</td></tr>
+                  <tr><th><em>x</em><sub>4</sub></th><td>7.30000000</td><td>7.30000000</td><td>7.30000000</td><td>7.30000000</td><td>7.30000000</td><td>7.30000000</td></tr>
+                  <tr><th><em>x</em><sub>5</sub></th><td>7.71531991</td><td>7.71531991</td><td>7.71531991</td><td>7.71531991</td><td>7.71531991</td><td>7.71531991</td></tr>
+                  <tr><th><em>x</em><sub>6</sub></th><td>3.35054095</td><td>3.35054095</td><td>3.35054095</td><td>3.35054095</td><td>3.35054095</td><td>3.35054095</td></tr>
+                  <tr><th><em>x</em><sub>7</sub></th><td>5.28665446</td><td>5.28665446</td><td>5.28665446</td><td>5.28665446</td><td>5.28665446</td><td>5.28665446</td></tr>
+                  <tr><th>Min</th><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td></tr>
+                  <tr><th>Ave</th><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td><td>2994.42447</td></tr>
+                  <tr><th>Std</th><td>9.2825E-13</td><td>1.0229E-08</td><td>9.2825E-13</td><td>9.2825E-13</td><td>9.2825E-13</td><td>9.2825E-13</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article class="engineering-case">
+            <figure>
+              <img src="assets/eng_tension.png" alt="Tension compression spring design problem">
+              <figcaption>Fig. 13. Tension/compression spring design.</figcaption>
+            </figure>
+            <div class="engineering-results">
+              <h3>RC17: Spring design</h3>
+              <table aria-label="Numerical results for the spring design problem">
+                <thead><tr><th></th><th>ECO</th><th>FDB-AGDE</th><th>FDB-SFS</th><th>LRFDB-COA</th><th>L-SHADE</th><th>NSM-SFS</th></tr></thead>
+                <tbody>
+                  <tr><th><em>x</em><sub>1</sub></th><td>0.05169231</td><td>0.05168906</td><td>0.05168901</td><td>0.05172036</td><td>0.05168907</td><td>0.05168904</td></tr>
+                  <tr><th><em>x</em><sub>2</sub></th><td>0.35679602</td><td>0.35671777</td><td>0.35671643</td><td>0.35747109</td><td>0.35671784</td><td>0.35671715</td></tr>
+                  <tr><th><em>x</em><sub>3</sub></th><td>11.2843781</td><td>11.2889638</td><td>11.2890426</td><td>11.2449453</td><td>11.2889601</td><td>11.2890006</td></tr>
+                  <tr><th>Min</th><td>0.01266523</td><td>0.01266523</td><td>0.01266523</td><td>0.01266524</td><td>0.01266523</td><td>0.01266523</td></tr>
+                  <tr><th>Ave</th><td>0.01266525</td><td>0.01266527</td><td>0.01266533</td><td>0.01266538</td><td>0.01266950</td><td>0.01266525</td></tr>
+                  <tr><th>Std</th><td>3.8839E-09</td><td>2.2047E-06</td><td>9.4667E-06</td><td>1.0027E-06</td><td>6.5781E-05</td><td>1.8822E-08</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article class="engineering-case">
+            <figure>
+              <img src="assets/eng_beam.png" alt="Welded beam design problem">
+              <figcaption>Fig. 14. Welded beam design.</figcaption>
+            </figure>
+            <div class="engineering-results">
+              <h3>RC19: Welded beam design</h3>
+              <table aria-label="Numerical results for the welded beam design problem">
+                <thead><tr><th></th><th>ECO</th><th>FDB-AGDE</th><th>FDB-SFS</th><th>LRFDB-COA</th><th>L-SHADE</th><th>NSM-SFS</th></tr></thead>
+                <tbody>
+                  <tr><th><em>x</em><sub>1</sub></th><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td></tr>
+                  <tr><th><em>x</em><sub>2</sub></th><td>3.25312004</td><td>3.25312004</td><td>3.25312004</td><td>3.25312004</td><td>3.25312004</td><td>3.25312004</td></tr>
+                  <tr><th><em>x</em><sub>3</sub></th><td>9.03662391</td><td>9.03662391</td><td>9.03662391</td><td>9.03662391</td><td>9.03662391</td><td>9.03662391</td></tr>
+                  <tr><th><em>x</em><sub>4</sub></th><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td><td>0.20572964</td></tr>
+                  <tr><th>Min</th><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td></tr>
+                  <tr><th>Ave</th><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td><td>1.69524716</td></tr>
+                  <tr><th>Std</th><td>2.2662E-16</td><td>2.2662E-16</td><td>2.2662E-16</td><td>2.2662E-16</td><td>2.2662E-16</td><td>2.2662E-16</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article class="engineering-case">
+            <figure>
+              <img src="assets/eng_three.png" alt="Three-bar truss design problem">
+              <figcaption>Fig. 15. Three-bar truss design.</figcaption>
+            </figure>
+            <div class="engineering-results">
+              <h3>RC20: Three-bar truss</h3>
+              <table aria-label="Numerical results for the three-bar truss design problem">
+                <thead><tr><th></th><th>ECO</th><th>FDB-AGDE</th><th>FDB-SFS</th><th>LRFDB-COA</th><th>L-SHADE</th><th>NSM-SFS</th></tr></thead>
+                <tbody>
+                  <tr><th><em>x</em><sub>1</sub></th><td>0.78867513</td><td>0.78867514</td><td>0.78867514</td><td>0.78867507</td><td>0.78867513</td><td>0.78867513</td></tr>
+                  <tr><th><em>x</em><sub>2</sub></th><td>0.40824830</td><td>0.40824829</td><td>0.40824829</td><td>0.40824848</td><td>0.40824829</td><td>0.40824830</td></tr>
+                  <tr><th>Min</th><td>263.895843</td><td>263.895843</td><td>263.895843</td><td>263.895843</td><td>263.895843</td><td>263.895843</td></tr>
+                  <tr><th>Ave</th><td>263.895843</td><td>263.895843</td><td>263.895843</td><td>263.895843</td><td>263.895843</td><td>263.895843</td></tr>
+                  <tr><th>Std</th><td>5.8016E-14</td><td>5.8016E-14</td><td>5.8016E-14</td><td>3.1422E-11</td><td>5.8016E-14</td><td>5.8016E-14</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article class="engineering-case">
+            <figure>
+              <img src="assets/eng_gear.png" alt="Gear train design problem">
+              <figcaption>Fig. 16. Gear train design.</figcaption>
+            </figure>
+            <div class="engineering-results">
+              <h3>RC31: Gear train design</h3>
+              <table aria-label="Numerical results for the gear train design problem">
+                <thead><tr><th></th><th>ECO</th><th>FDB-AGDE</th><th>FDB-SFS</th><th>LRFDB-COA</th><th>L-SHADE</th><th>NSM-SFS</th></tr></thead>
+                <tbody>
+                  <tr><th><em>x</em><sub>1</sub></th><td>49.3000403</td><td>49.4918951</td><td>49.3824442</td><td>48.6638793</td><td>49.3698757</td><td>49.2889111</td></tr>
+                  <tr><th><em>x</em><sub>2</sub></th><td>19.3605917</td><td>16.0983856</td><td>15.7965736</td><td>18.5973568</td><td>16.0521244</td><td>16.0674738</td></tr>
+                  <tr><th><em>x</em><sub>3</sub></th><td>15.8481360</td><td>19.3860636</td><td>19.3517569</td><td>16.2893830</td><td>19.2014224</td><td>18.9821250</td></tr>
+                  <tr><th><em>x</em><sub>4</sub></th><td>42.8673784</td><td>42.6301489</td><td>43.4353539</td><td>43.2077863</td><td>42.5424910</td><td>43.3920358</td></tr>
+                  <tr><th>Min</th><td>2.7009E-12</td><td>2.7010E-12</td><td>2.7017E-12</td><td>2.7009E-12</td><td>2.7015E-12</td><td>2.7010E-12</td></tr>
+                  <tr><th>Ave</th><td>2.7009E-12</td><td>1.8669E-11</td><td>3.7588E-10</td><td>1.4927E-11</td><td>2.0184E-11</td><td>1.5408E-11</td></tr>
+                  <tr><th>Std</th><td>0.0000E+00</td><td>2.1711E-10</td><td>4.7952E-10</td><td>1.0189E-11</td><td>2.4235E-10</td><td>1.0324E-11</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
       </section>
       </div>
       <div class="resource-band" aria-label="Resources">
