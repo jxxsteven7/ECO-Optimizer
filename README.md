@@ -22,6 +22,19 @@
 
 ![Ecological relationships used by ECO](assets/eco_ecosystem.jpg)
 
+## Contents
+
+- [Overview](#overview)
+- [Method at a Glance](#method-at-a-glance)
+- [Repository Structure](#repository-structure)
+- [Requirements](#requirements)
+- [Quick Start](#quick-start)
+- [Reproducing the Included Benchmark Runs](#reproducing-the-included-benchmark-runs)
+- [Using ECO on a Custom Problem](#using-eco-on-a-custom-problem)
+- [Experimental Scope in the Paper](#experimental-scope-in-the-paper)
+- [Citation](#citation)
+- [Contact](#contact)
+
 ## Overview
 
 ECO models an optimization population as an ecological system. Its design is inspired by energy flow and material cycling among producers, consumers, decomposers, and nutrients. The algorithm combines complementary update mechanisms to maintain a dynamic balance between global exploration and local exploitation.
