@@ -1,6 +1,7 @@
 # Ecological Cycle Optimizer (ECO)
 
-> A nature-inspired metaheuristic algorithm for nonlinear and non-convex global optimization.
+
+> A novel nature-inspired metaheuristic algorithm for non-convex global optimization.
 
 <p>
   <a href="https://arxiv.org/abs/2508.20458"><img src="assets/paper-badge.svg" height="36" alt="Paper" align="absmiddle"></a>
@@ -186,8 +187,8 @@ If you use ECO or this implementation in your research, please cite:
 
 ```bibtex
 @article{2026eco,
-  title   = {Ecological Cycle Optimizer: A Novel Nature-Inspired Metaheuristic Algorithm for Global Optimization},
-  author  = {Ma, Boyu and Shi, Jiaxiao and Ji, Yiming and Wang, Zhengpu},
+  title   = {Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization},
+  author  = {Boyu Ma, Jiaxiao Shi, Yiming Ji and Zhengpu Wang},
   journal = {arXiv preprint arXiv:2508.20458},
   year    = {2026}
 }
