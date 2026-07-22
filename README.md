@@ -3,9 +3,9 @@
 > A nature-inspired metaheuristic algorithm for nonlinear and non-convex global optimization.
 
 <p>
-  <a href="https://arxiv.org/abs/2508.20458"><img src="assets/arxiv-logo.svg" width="18" alt="arXiv" align="absmiddle"> <img src="https://img.shields.io/badge/Paper-arXiv%3A2508.20458-B31B1B?style=for-the-badge" alt="Paper" align="absmiddle"></a>
-  <a href="https://jxxsteven7.github.io/ECO-Optimizer/"><img src="assets/website-logo.svg" width="18" alt="Website" align="absmiddle"> <img src="https://img.shields.io/badge/Project-Website-2E6F62?style=for-the-badge" alt="Project website" align="absmiddle"></a>
-  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="assets/matlab-logo.svg" width="18" alt="MATLAB" align="absmiddle"> <img src="https://img.shields.io/badge/MATLAB-File%20Exchange-ED6A3A?style=for-the-badge" alt="MATLAB File Exchange" align="absmiddle"></a>
+  <a href="https://arxiv.org/abs/2508.20458"><img src="assets/paper-badge.svg" height="36" alt="Paper" align="absmiddle"></a>
+  <a href="https://jxxsteven7.github.io/ECO-Optimizer/"><img src="assets/website-badge.svg" height="36" alt="Website" align="absmiddle"></a>
+  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="assets/matlab-badge.svg" height="36" alt="MATLAB" align="absmiddle"></a>
 </p>
 
 <!-- <p align="center">
