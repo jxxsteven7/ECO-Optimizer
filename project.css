@@ -278,8 +278,11 @@ footer a { color: var(--clay); }
   height: calc(100svh - 80px);
   min-height: 0;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   padding: 48px 0 76px;
 }
+.content-page.is-active-page::-webkit-scrollbar { display: none; }
 .article-page {
   width: min(880px, calc(100% - 64px));
   margin: 0 auto;
