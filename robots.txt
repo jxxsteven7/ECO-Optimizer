@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jxxsteven7.github.io/ECO-Optimizer/sitemap.xml
