@@ -1,5 +1,5 @@
 %----------------------------------------------------------------------------------------------------------------------
-%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization.
+%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization
 %
 %  Authors: Boyu Ma* (boyu.ma@ntu.edu.sg), Jiaxiao Shi* (jiaxiao.shi@ntu.edu.sg), Yiming Ji, Zhengpu Wang
 %
@@ -16,16 +16,16 @@ P_herbivore = 0.3;
 P_carnivore = 0.3;
 % P_omnivore = 0.2;
 
-% Decompose probabilities
-P_opt = 0.6;
-P_loc = 0.6
-
 % Number of producers, herbivores, carnivores, omnivores, and decomposers
 Pro_num = round(Pop_size * P_producer);
 Her_num = round(Pop_size * P_herbivore);
 Car_num = round(Pop_size * P_carnivore);
 Omn_num = Pop_size - Pro_num - Her_num - Car_num;
 Dec_num = Pop_size;
+
+% Decompose probabilities
+P_opt = 0.6;
+P_loc = 0.6;
 
 lb = Low.*ones(1, dim);
 ub = Up.*ones(1, dim);

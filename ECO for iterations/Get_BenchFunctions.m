@@ -1,5 +1,5 @@
 %----------------------------------------------------------------------------------------------------------------------
-%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization.
+%  Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization
 %
 %  Authors: Boyu Ma* (boyu.ma@ntu.edu.sg), Jiaxiao Shi* (jiaxiao.shi@ntu.edu.sg), Yiming Ji, Zhengpu Wang
 %
@@ -9,7 +9,6 @@
 %----------------------------------------------------------------------------------------------------------------------
 
 function [lb, ub, dim, fobj] = Get_BenchFunctions(Function_name)
-
 
 switch Function_name
     
