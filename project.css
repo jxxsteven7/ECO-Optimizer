@@ -77,7 +77,7 @@ h1 em, h2 em { color: var(--clay); font-weight: 600; }
 .button-matlab { border-color: #b85e38; color: #8e3e25; background: transparent; }
 .button-matlab:hover { background: rgba(201, 107, 67, .08); }
 .button-logo { display: block; width: 18px; height: 18px; flex: none; object-fit: contain; }
-.arxiv-logo { width: 17px; height: 20px; }
+.arxiv-logo { width: 19px; height: 20px; object-fit: cover; object-position: center; }
 .github-logo { width: 19px; height: 19px; }
 .matlab-logo { width: 20px; height: 20px; }
 .button-arrow { margin-left: 2px; font-family: "DM Mono", monospace; font-size: .9rem; line-height: 1; }
