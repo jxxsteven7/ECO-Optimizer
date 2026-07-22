@@ -17,14 +17,14 @@
     <nav aria-label="Primary navigation">
       <a href="#overview">Overview</a>
       <a href="#method">Method</a>
-      <a href="#evaluation">Evaluation</a>
+      <a href="#experiments">Experiments</a>
       <a href="#citation">Citation</a>
     </nav>
     <a class="header-code" href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero page-section" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Nature-inspired global optimization</p>
         <h1 id="hero-title">Ecological<br><em>Cycle</em> Optimizer</h1>
@@ -45,7 +45,7 @@
       </div>
     </section>
 
-    <section class="statement" id="overview" aria-labelledby="overview-title">
+    <section class="statement page-section" id="overview" aria-labelledby="overview-title">
       <p class="section-index">01 / Overview</p>
       <div>
         <h2 id="overview-title">Search as a living<br>system of <em>exchange.</em></h2>
@@ -53,7 +53,7 @@
       </div>
     </section>
 
-    <section class="mechanisms" id="method" aria-labelledby="method-title">
+    <section class="mechanisms page-section" id="method" aria-labelledby="method-title">
       <div class="section-heading">
         <p class="section-index">02 / Method</p>
         <h2 id="method-title">Three ecological roles,<br>one coordinated search.</h2>
@@ -84,7 +84,7 @@
       </div>
     </section>
 
-    <section class="evaluation" id="evaluation" aria-labelledby="evaluation-title">
+    <section class="evaluation page-section" id="experiments" aria-labelledby="evaluation-title">
       <div class="evaluation-copy">
         <p class="section-index">03 / Evaluation</p>
         <h2 id="evaluation-title">Designed for broad<br>optimization settings.</h2>
@@ -96,18 +96,17 @@
         <div class="metric" role="listitem"><strong>3</strong><span>IEEE CEC numerical benchmark suites</span></div>
         <div class="metric" role="listitem"><strong>5</strong><span>real-world engineering design problems</span></div>
       </div>
-    </section>
-
-    <section class="resource-band" aria-label="Resources">
-      <p>Ready to experiment with ECO?</p>
-      <div>
-        <a href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">Source code <span aria-hidden="true">↗</span></a>
-        <a href="https://arxiv.org/abs/2508.20458" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
-        <a href="mailto:jxxsteven7@gmail.com">Contact <span aria-hidden="true">↗</span></a>
+      <div class="resource-band" aria-label="Resources">
+        <p>Ready to experiment with ECO?</p>
+        <div>
+          <a href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">Source code <span aria-hidden="true">↗</span></a>
+          <a href="https://arxiv.org/abs/2508.20458" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+          <a href="mailto:jxxsteven7@gmail.com">Contact <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
 
-    <section class="citation" id="citation" aria-labelledby="citation-title">
+    <section class="citation page-section" id="citation" aria-labelledby="citation-title">
       <div>
         <p class="section-index">04 / Citation</p>
         <h2 id="citation-title">If ECO supports your work,<br>please cite the paper.</h2>
@@ -138,6 +137,26 @@
       button.textContent = 'Copied';
       setTimeout(() => { button.textContent = 'Copy BibTeX'; }, 1600);
     });
+
+    const navLinks = [...document.querySelectorAll('nav a')];
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const setActiveLink = (sectionId) => {
+      navLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === `#${sectionId}`);
+      });
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visibleEntry) setActiveLink(visibleEntry.target.id);
+    }, { threshold: [0.5, 0.7] });
+
+    sections.forEach((section) => sectionObserver.observe(section));
   </script>
 </body>
 </html>
