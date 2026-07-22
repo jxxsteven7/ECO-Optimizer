@@ -89,17 +89,6 @@ h1 em, h2 em { color: var(--clay); font-weight: 600; }
 .label-exploit { right: 5%; bottom: 19%; }
 .figure-note { position: absolute; z-index: 3; right: 0; bottom: 1%; width: 170px; margin: 0; font-family: "DM Mono", monospace; font-size: .62rem; line-height: 1.5; }
 
-.page-section { display: none; }
-.page-section.is-active-page { animation: panel-enter .42s ease both; }
-.hero.is-active-page,
-.statement.is-active-page,
-.evaluation.is-active-page,
-.citation.is-active-page { display: grid; }
-.mechanisms.is-active-page { display: flex; }
-@keyframes panel-enter {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 .statement, .mechanisms, .evaluation, .citation { width: min(1240px, calc(100% - 64px)); margin: 0 auto; }
 .statement {
   display: grid;
@@ -183,6 +172,19 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
 footer { grid-column: 1 / -1; display: flex; justify-content: space-between; width: 100%; margin-top: 30px; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--body); font-family: "DM Mono", monospace; font-size: .67rem; }
 footer p { margin: 0; }
 footer a { color: var(--clay); }
+
+/* These rules must follow the section layouts so inactive pages stay hidden. */
+.page-section { display: none; }
+.page-section.is-active-page { animation: panel-enter .42s ease both; }
+.hero.is-active-page,
+.statement.is-active-page,
+.evaluation.is-active-page,
+.citation.is-active-page { display: grid; }
+.mechanisms.is-active-page { display: flex; }
+@keyframes panel-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @media (max-width: 820px) {
   main { overflow-y: auto; }
