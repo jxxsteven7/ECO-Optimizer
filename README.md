@@ -1,242 +1,205 @@
+# Ecological Cycle Optimizer (ECO)
 
-# Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for global optimization
-
-<div align="center">
-
-<!-- <table>
-<tr>
-<td valign="top">
-  <strong>Accepted by <em>Expert Systems with Applications</em></strong>
-</td>
-<td valign="top" width="60">
-  <a href="https://arxiv.org/abs/2503.21860">
-    <img src='https://img.shields.io/badge/Paper-red?style=for-the-badge&color=B31B1' alt='Paper PDF'>
-  </a>
-</td>
-</tr>
-</table> -->
-<!-- <table style="border: none; border-collapse: collapse;">
-<tr>
-<td valign="top">
-  <strong>Accepted by <em>Expert Systems with Applications</em></strong>
-</td>
-<td valign="top" width="60">
-  <a href="https://arxiv.org/abs/2503.21860">
-    <img src='https://img.shields.io/badge/Paper-red?style=for-the-badge&color=B31B1' alt='Paper PDF'>
-  </a>
-</td>
-</tr>
-</table> -->
-<!-- <table style="border: none; border-collapse: collapse;">
-<tr>
-<td valign="top" style="border: none;">
-  <strong>Accepted by <em>Expert Systems with Applications</em></strong>
-</td>
-<td valign="top" width="70" style="border: none;">
-  <a href="https://arxiv.org/abs/2503.21860">
-    <img src='https://img.shields.io/badge/Paper-red?style=for-the-badge&color=B31B1' alt='Paper PDF'>
-  </a>
-</td>
-</tr>
-</table> -->
-
-<!-- <a href="https://github.com/jiaxiao-shi/ECO-Optimizer.git">
-  <img src='https://img.shields.io/badge/Paper-red?style=for-the-badge&color=B31B1' alt='Paper PDF'>
-</a> -->
-
-<!-- Submitted to <strong><em>Expert Systems with Applications</em></strong> -->
-<!-- <strong>Accepted by <em>Expert Systems with Applications</em></strong> -->
-
-
-✉️[Boyu Ma*](mailto:mby9702@163.com), ✉️[Jiaxiao Shi*](mailto:jiaxiao364@gmail.com),  Yiming Ji and Zhengpu Wang.
-
-<strong><em>State Key Laboratory of Robotics and Systems, Harbin Institute of Technology</em></strong>
+> A nature-inspired metaheuristic algorithm for nonlinear and non-convex global optimization.
 
 <p align="center">
-    <a href="https://arxiv.org/abs/2508.20458">
-        <img src='https://img.shields.io/badge/Paper-red?style=for-the-badge&labelColor=B31B1B&color=B31B1B' alt='Paper PDF'></a>
-    <!-- <a href='https://maniptrans.github.io/'>
-        <img src='https://img.shields.io/badge/Project-orange?style=for-the-badge&labelColor=D35400' alt='Project Page'></a> -->
-    <!-- <a href='https://huggingface.co/datasets/LiKailin/DexManipNet'>
-        <img src='https://img.shields.io/badge/Dataset-orange?style=for-the-badge&labelColor=FFD21E&color=FFD21E' alt='Dataset'></a> -->
-    <!-- <a href=""><img alt="youtube views" src="https://img.shields.io/badge/Video-red?style=for-the-badge&logo=youtube&labelColor=ce4630&logoColor=red"/></a> -->
+  <a href="https://arxiv.org/abs/2508.20458"><img src="https://img.shields.io/badge/Paper-arXiv%3A2508.20458-B31B1B?style=for-the-badge" alt="Paper"></a>
+  <a href="https://jxxsteven7.github.io/ECO-Optimizer/"><img src="https://img.shields.io/badge/Project-Website-2E6F62?style=for-the-badge" alt="Project website"></a>
+  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="https://img.shields.io/badge/MATLAB-File%20Exchange-ED6A3A?style=for-the-badge" alt="MATLAB File Exchange"></a>
 </p>
-
-<!-- <hr style="height:4px; border-width:0; background-color:#E6F2FF"> -->
-<!-- <hr style="height:4px; border-width:0; background-color:#B0E0E6"> -->
-<!-- <hr style="height:4px; border-width:0; background-color:#ADD8E6"> -->
-<hr style="height:4px; border-width:0; background-color:#AFEEEE">
-<!-- <hr style="height:4px; border-width:0; background-color:#D4F1F9"> -->
-<!-- <hr style="height:4px; border-width:0; background-color:#0000FF"> -->
-
-
-</div>
 
 <p align="center">
-  <img src="assets/Ecosystem.jpg" alt="teaser" width="100%">
+  <a href="https://arxiv.org/abs/2508.20458">Paper</a> &nbsp;|&nbsp;
+  <a href="https://jxxsteven7.github.io/ECO-Optimizer/">Project page</a> &nbsp;|&nbsp;
+  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco">MATLAB File Exchange</a>
 </p>
 
-## 📚 Table of Contents
-1. [Installation](#Installation)
-2. [Usage](#Usage)
-3. [Results](#Results)
-4. [Collaboration & Support](#Collaboration--Support)
-5. [Ciatation](#Ciatation)
+**Boyu Ma**<sup>1,2,*</sup>, **Jiaxiao Shi**<sup>1,2,*</sup>, **Yiming Ji**<sup>1</sup>, and **Zhengpu Wang**<sup>1</sup>
 
-## 🛠️ Installation
-<a id="Installation"></a>
+<sup>1</sup> State Key Laboratory of Robotics and Systems, Harbin Institute of Technology, Harbin, China<br>
+<sup>2</sup> School of Mechanical and Aerospace Engineering, Nanyang Technological University, Singapore 639798, Singapore<br>
+<sup>*</sup> Equal contribution.
 
-Run the following command to download our code:
-``` shell
-git clone https://github.com/jiaxiao-shi/ECO-Optimizer.git
-```
+![Ecological relationships used by ECO](assets/eco_ecosystem.jpg)
 
-Our code are developed in **Matlab2023a**, please make sure the API and syntax are compatible with your software.
+## Overview
 
-The structure of our project is:
+ECO models an optimization population as an ecological system. Its design is inspired by energy flow and material cycling among producers, consumers, decomposers, and nutrients. The algorithm combines complementary update mechanisms to maintain a dynamic balance between global exploration and local exploitation.
 
-``` shell
-ECO-Matlab
-├── assets
-│   └── images & support documents
-├── ECO for FEs
-│   └── main functions
-├── ECO for iterations
-│   └── main functions
-└── README.md
-```
+The codebase provides two MATLAB implementations:
 
-To properly run **ECO** on your computer, please refer to [Usage](#Usage).
+- **`ECO for FEs`**: uses a maximum number of function evaluations (`MaxFEs`) as the termination criterion. Use this version for CEC-style comparisons with an evaluation-budget criterion.
+- **`ECO for iterations`**: uses a maximum number of iterations (`Max_it`) as the termination criterion. Use this version for iteration-based experiments or direct applications.
 
-## 🔎 Usage
-<a id="Usage"></a>
+## Method at a Glance
 
-### Introduction
+Each iteration includes the following ecological roles:
 
-There are two versions of ECO for different purpose of use and evaluations:
+1. **Producers** absorb nutrients and provide guided candidate information.
+2. **Consumers** consist of herbivores, carnivores, and omnivores with different predation-based update behaviours.
+3. **Decomposers** recycle population information through optimal, local-random, and global-random decomposition.
+4. **Selection** retains improved individuals and preserves the best solution found so far.
 
-- ECO for FEs
-- ECO for iterations
+The recommended default configuration, determined by parameter sensitivity analysis on 23 classic benchmark functions, is:
 
-The function name and structure of these two versions are exactly the same. If you want to apply ECO in solving <span style="color: green;">optimization problems</span>, please refer to the functions in `./ECO for iterations/`. If you want to evaluate the performance of ECO with a standard criteria of <span style="color: red;">maximun function evaluations (MaxFEs)</span>, please use the functions in `./ECO for FEs/`.
-
-As for the optimization functions, we use the <strong><span style="color: blue;">23 classic optimization functions</span></strong> as benchmark. It is defined in **`Get_BenchFunctions.m`**. You can simply edit this file if you want to adopt other benchmarks or customized optimization functions.
-
-Simply, you can run **`main.m`** in any of these two directories to start applying ECO in solving optimization functions. The core of **`main.m`** is the code below, which will call **`ECO.m`** for the implementation of ECO.
-
-``` matlab
-[Best_pos, Best_fit, ECO_curve] = ECO(Pop_size, Max_it, MaxFEs, Low, Up, dim, fobj);
-```
-
-The `Function_list` in **`main.m`** are used together with **`Get_BenchFunctions.m`**, and `fobj` refers to the objective of functions defined in **`Get_BenchFunctions.m`**.
-
-``` matlab
-Function_list = {'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8',  ...
-                 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15',  ...
-                 'F16', 'F17', 'F18', 'F19', 'F20', 'F21', 'F22', 'F23'}; 
-
-for func_idx = 1:length(Function_list)
-    % Get the detail information of current optimization function
-    Function_name = Function_list{func_idx};  
-    [Low, Up, dim, fobj] = Get_BenchFunctions(Function_name); 
-    ...
-end
-```
-
-ECO will be excuted for $N$ times indepently on each optimization function. After finished solving one optimization function, ECO will record the $N$ times of the:
-- Convergence curve
-- Best coordinates of search particles
-- Best fitness value
-
-``` matlab
-Run_times = 25;
-for run = 1:Run_times
-    [Best_pos, Best_fit, ECO_curve] = ECO(Pop_size, Max_it, MaxFEs, Low, Up, dim, fobj);
-    % Store the results for this run
-    All_ECO_curve(run, :) = ECO_curve;      % Store the curve of best fitness values
-    All_Best_pos(run, :)  = Best_pos;       % Store the best position found
-    All_Best_fit(run)     = Best_fit;       % Store the best fitness value
-end
-```
-
-And these results will be written in to `csv` files in `./results`:
-
-``` matlab
-Function_name = Function_list{func_idx};
-
-% Generate unique filenames for the current function
-ECO_curve_filename = ['./results/Convergence_curve_classic_', Function_name, '.csv'];
-Best_pos_filename  = ['./results/Best_pos_classic_', Function_name, '.csv'];
-Best_fit_filename  = ['./results/Best_fit_classic_', Function_name, '.csv'];
-
-% Save the results for the current function to csv files
-writematrix(All_ECO_curve, ECO_curve_filename);
-writematrix(All_Best_pos,  Best_pos_filename);
-writematrix(All_Best_fit,  Best_fit_filename);
-```
-
-
-### ECO for iterations
-
-Adjust the parameter in `main.m` to run **ECO**:
-
-``` matlab
-Max_it = 500; 
-
-if dim == 30
-    Max_it = 5556;
-elseif dim == 2
-    Max_it = 370;
-elseif dim == 3
-    Max_it = 556;
-elseif dim == 4
-    Max_it = 741;
-elseif dim == 6
-    Max_it = 1111;
-end
-```
-
-### ECO for FEs
-
-Usually, the performance of **metaheuristic algorithms (MHS)** are evaluate with uniform criteria, one is the termination condition. Although many MHS are designed by iterative methods (including ECO), it is unfair to set a maximum times of iterations as a standard termination condition because of the different search mechanism of MHS. Thus, **IEEE CEC** defined an uniform termination criteria: <span style="color: red;">maximun function evaluations (MaxFEs)</span>. Once the solution of current search particles is calculated, FEs adds one, until finally reachs MaxFEs.
-
-As a result, to evaluate the performance of ECO, you can simply ajust **$MaxFEs$** in `main.m` to run **ECO**:
-
-``` matlab
-% Parameters setting
-Pop_size = 30; 
-Run_times = 25;
-MaxFEs = 10000 * dim;
-```
-
-### Parameters of ECO
-
-In **`main.m`**
-
-``` matlab
-Pop_size = 30;
-```
-
-In **`ECO.m`**
-
-``` matlab
-% Proportion of producers, herbivores, carnivores, and omnivores in the population
+```matlab
 P_producer = 0.2;
 P_herbivore = 0.3;
 P_carnivore = 0.3;
-% P_omnivore = 0.2;
+% P_omnivore = 0.2;  % Remaining population proportion
+
+P_opt = 0.6;
+P_loc = 0.6;
 ```
 
-## 📝 Results
-<a id="Results"></a>
+`P_opt` controls optimal decomposition. When random decomposition is selected, `P_loc` controls the preference for local rather than global random decomposition.
 
-In our experiments.
+## Repository Structure
 
-For detailed information, please refer to our [paper](https://arxiv.org/abs/2508.20458).
+```text
+ECO-Optimizer/
+|-- ECO for FEs/
+|   |-- main.m                 # Reproduction script with MaxFEs termination
+|   |-- ECO.m                  # Core ECO implementation
+|   |-- Get_BenchFunctions.m   # 23 classic benchmark functions
+|   |-- Boundmapping.m         # Boundary handling
+|   |-- Pos_update.m           # Greedy position update
+|   `-- Roulette.m             # Roulette-wheel selection
+|-- ECO for iterations/
+|   |-- main.m                 # Reproduction script with iteration termination
+|   |-- ECO.m                  # Core ECO implementation
+|   |-- Get_BenchFunctions.m   # 23 classic benchmark functions
+|   |-- Boundmapping.m
+|   |-- Pos_update.m
+|   `-- Roulette.m
+|-- assets/                    # Project-page figures and visual assets
+|-- index.html                 # Project website
+|-- project.css                # Project website styles
+`-- README.md
+```
 
-## 🌍 Collaboration & Support
-<a id="Collaboration--Support"></a>
+## Requirements
 
-💡 If you have any qustions regarding the conceptualization of ECO, please contact [Boyu Ma](mailto:mby9702@163.com). For implemention, programming and simulation problems, please contact [Jiaxiao Shi](mailto:jiaxiao364@gmail.com).
+- MATLAB R2023a (the code was developed in MATLAB R2023a).
+- No additional MATLAB toolbox is required by the provided benchmark scripts.
 
-🤝 Please feel feel to contact us if you wish to work together for future studies or applications, we are open to all forms of collaborative engagements.
+## Quick Start
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jxxsteven7/ECO-Optimizer.git
+cd ECO-Optimizer
+```
+
+Then open MATLAB, change to one of the following folders, and run `main.m`:
+
+```matlab
+cd('ECO for FEs');          % Function-evaluation version
+run('main.m');
+```
+
+or
+
+```matlab
+cd('ECO for iterations');   % Iteration-based version
+run('main.m');
+```
+
+The scripts automatically create a local `results/` directory and process the 23 classic benchmark functions (`F1`--`F23`).
+
+## Reproducing the Included Benchmark Runs
+
+### Function-evaluation version
+
+Run `ECO for FEs/main.m` to use the CEC-style budget:
+
+```matlab
+Pop_size = 30;
+Run_times = 10;
+MaxFEs = 10000 * dim;
+```
+
+The script selects the function dimension and a compatible iteration count internally, then calls:
+
+```matlab
+[Best_pos, Best_fit, ECO_curve] = ...
+    ECO(Pop_size, Max_it, MaxFEs, Low, Up, dim, fobj);
+```
+
+### Iteration-based version
+
+Run `ECO for iterations/main.m` for a fixed number of iterations:
+
+```matlab
+Pop_size = 30;
+Max_it = 500;
+Run_times = 10;
+```
+
+The corresponding call is:
+
+```matlab
+[Best_pos, Best_fit, ECO_curve] = ...
+    ECO(Pop_size, Max_it, Low, Up, dim, fobj);
+```
+
+### Outputs
+
+For every function, both scripts write the following CSV files to their own `results/` folder:
+
+- `Convergence_curve_classic_F*.csv`: one best-so-far convergence curve per independent run.
+- `Best_pos_classic_F*.csv`: the best decision vector from each run.
+- `Best_fit_classic_F*.csv`: the final best fitness value from each run.
+
+The MATLAB command window also reports the minimum, mean, and standard deviation of the final fitness values.
+
+## Using ECO on a Custom Problem
+
+1. Define an objective function with the signature `fobj(x)`, where `x` is a row vector.
+2. Specify the lower bound `Low`, upper bound `Up`, and dimension `dim`.
+3. Call the version of `ECO.m` that matches the desired termination criterion.
+
+For example, using the function-evaluation version:
+
+```matlab
+fobj = @(x) sum(x.^2);
+Low = -100;
+Up = 100;
+dim = 30;
+
+[Best_pos, Best_fit, Convergence_curve] = ...
+    ECO(30, 5556, 10000 * dim, Low, Up, dim, fobj);
+```
+
+To add benchmark functions to the supplied scripts, update `Get_BenchFunctions.m` and add the corresponding identifier to `Function_list` in `main.m`.
+
+## Experimental Scope in the Paper
+
+The paper evaluates ECO in three stages:
+
+1. **Parameter sensitivity analysis** on 23 classic functions to select the default population proportions and decomposition probabilities.
+2. **Numerical benchmarking** against a 30-algorithm metaheuristic pool on CEC-2014 and CEC-2017, followed by detailed evaluation on CEC-2020.
+3. **Engineering validation** on five constrained design problems from CEC-2020-RW.
+
+For methodological details, experimental settings, and complete results, please see the [paper](https://arxiv.org/abs/2508.20458) and the [project page](https://jxxsteven7.github.io/ECO-Optimizer/).
+
+## Citation
+
+If you use ECO or this implementation in your research, please cite:
+
+```bibtex
+@article{ma2025eco,
+  title   = {Ecological Cycle Optimizer: A Novel Nature-Inspired Metaheuristic Algorithm for Global Optimization},
+  author  = {Ma, Boyu and Shi, Jiaxiao and Ji, Yiming and Wang, Zhengpu},
+  journal = {arXiv preprint arXiv:2508.20458},
+  year    = {2025}
+}
+```
+
+## Contact
+
+For questions about the algorithm, implementation, or research collaboration, contact:
+
+- Boyu Ma: [boyu.ma@ntu.edu.sg](mailto:boyu.ma@ntu.edu.sg)
+- Jiaxiao Shi: [jiaxiao.shi@ntu.edu.sg](mailto:jiaxiao.shi@ntu.edu.sg)
