@@ -5,7 +5,7 @@
 <p>
   <a href="https://arxiv.org/abs/2508.20458"><img src="assets/paper-badge.svg" height="36" alt="Paper" align="absmiddle"></a>
   <a href="https://jxxsteven7.github.io/ECO-Optimizer/"><img src="assets/website-badge.svg" height="36" alt="Website" align="absmiddle"></a>
-  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="assets/matlab-badge.svg" height="36" alt="MATLAB" align="absmiddle"></a>
+  <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco"><img src="assets/matlab-badge.svg" height="36" alt="Matlab" align="absmiddle"></a>
 </p>
 
 <!-- <p align="center">
@@ -14,12 +14,11 @@
   <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco">MATLAB File Exchange</a>
 </p> -->
 
-<!-- Replace the two .example URLs below with the authors' personal homepage URLs. -->
-<a href="https://boyu-ma-homepage.example"><strong>Boyu Ma</strong></a><sup>1,2,*</sup>, <a href="https://jiaxiao-shi-homepage.example"><strong>Jiaxiao Shi</strong></a><sup>1,2,*</sup>, **Yiming Ji**<sup>1</sup>, and **Zhengpu Wang**<sup>1</sup>
+<a href="https://ma-boyu.github.io/"><strong>Boyu Ma</strong></a><sup>1,2,&#42;</sup>, <a href="https://github.com/jxxsteven7"><strong>Jiaxiao Shi</strong></a><sup>1,2,&#42;</sup>, <a href="https://scholar.google.com/citations?user=hVKAr7YAAAAJ&amp;hl=zh-CN"><strong>Yiming Ji</strong></a><sup>1</sup>, and <a href="https://www.researchgate.net/scientific-contributions/Zhengpu-Wang-2228862425"><strong>Zhengpu Wang</strong></a><sup>1</sup>
 
 <sup>1</sup> State Key Laboratory of Robotics and Systems, Harbin Institute of Technology, Harbin, China<br>
 <sup>2</sup> School of Mechanical and Aerospace Engineering, Nanyang Technological University, Singapore 639798, Singapore<br>
-<sup>*</sup> Equal contribution.
+<sup>&#42;</sup> Equal contribution.
 
 ![Ecological relationships used by ECO](assets/eco_ecosystem.jpg)
 

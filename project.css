@@ -86,6 +86,8 @@ h1 em, h2 em { color: var(--clay); font-weight: 600; }
 .authors { margin: 62px 0 0; color: var(--ink); font-size: .84rem; line-height: 1.8; }
 .authors sup { color: var(--clay); font-weight: 700; }
 .authors span { color: var(--body); font-size: .76rem; }
+.authors .author-link { border-bottom: 1px solid transparent; font-weight: 700; }
+.authors .author-link:hover { color: var(--clay); border-bottom-color: var(--clay); }
 
 .hero-art { position: relative; display: grid; place-items: center; min-height: 500px; }
 .hero-art::before { content: ""; position: absolute; width: 92%; aspect-ratio: 1; border: 1px dashed rgba(24, 61, 54, .4); border-radius: 50%; }
