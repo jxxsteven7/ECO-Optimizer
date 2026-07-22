@@ -150,19 +150,52 @@
         <p>Population composition and decomposition probabilities are investigated separately on <a class="benchmark-link" href="https://ieeexplore.ieee.org/document/771163" target="_blank" rel="noreferrer">23 classic optimization functions</a>. The population proportions are restricted to balanced ecological configurations, and the candidate settings are ranked from repeated optimization runs.</p>
         <p>The selected default configuration is <em>P<sub>Pro</sub> = 0.2, P<sub>Her</sub> = 0.3, P<sub>Car</sub> = 0.3, P<sub>Omn</sub> = 0.2</em>, with <em>p<sub>opt</sub> = 0.6</em> and <em>p<sub>loc</sub> = 0.6</em>. It is adopted in the subsequent experiments.</p>
       <div class="experiment-visuals">
-        <figure><img src="assets/pop-sensitivity.png" alt="Population proportion sensitivity ranks across 23 benchmark functions"><figcaption>Population structure</figcaption></figure>
-        <figure><img src="assets/prob-sensitivity.png" alt="Decomposition probability sensitivity ranks across 23 benchmark functions"><figcaption>Decomposition probabilities</figcaption></figure>
+        <figure><img src="assets/pop-sensitivity.png" alt="Population proportion sensitivity ranks across 23 benchmark functions"><figcaption>Fig. 5. Population proportion sensitivity analysis.</figcaption></figure>
+        <figure><img src="assets/prob-sensitivity.png" alt="Decomposition probability sensitivity ranks across 23 benchmark functions"><figcaption>Fig. 6. Decomposition probability sensitivity analysis.</figcaption></figure>
       </div>
       </section>
       <section class="article-section">
-        <h2>Comparison with state-of-the-art algorithms</h2>
-        <p>ECO is first compared with a pool of 30 metaheuristic algorithms on <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2014" target="_blank" rel="noreferrer">CEC-2014</a> and <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2017-BoundContrained" target="_blank" rel="noreferrer">CEC-2017</a>. The leading algorithms are then selected for a more detailed evaluation on <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-Bound-Constrained-Opt-Benchmark" target="_blank" rel="noreferrer">CEC-2020</a> across dimensions of 10, 30, 50, and 100.</p>
-        <p>The comparison records Min, Ave, and Std values from independent runs. Algorithms are ranked for each function by smaller Ave, followed by Min and Std, and their global performance is summarized using the Friedman mean rank.</p>
+        <h2>Screening of state-of-the-art algorithms</h2>
+        <p>ECO is first evaluated against a pool of 30 metaheuristic algorithms on <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2014" target="_blank" rel="noreferrer">CEC-2014</a> and <a class="benchmark-link" href="https://github.com/P-N-Suganthan/CEC2017-BoundContrained" target="_blank" rel="noreferrer">CEC-2017</a>. Algorithms are ranked on each function by smaller Ave, followed by Min and Std, and their global performance is summarized using the Friedman mean rank.</p>
+        <p>ECO ranks first in this 30-algorithm screening. The five most competitive alternatives, ARO, CFOA, CSA, WSO, and INFO, are then selected for the more detailed CEC-2020 evaluation.</p>
+      </section>
+      <section class="article-section">
+        <h2>CEC-2020 statistical comparison</h2>
+        <p>The six algorithms are compared on <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-Bound-Constrained-Opt-Benchmark" target="_blank" rel="noreferrer">CEC-2020</a> at <em>D = 10, 30, 50,</em> and <em>100</em>. The suite includes shifted, rotated, hybrid, and composition functions, which test robustness on nonseparable and multimodal landscapes.</p>
+        <p>The box plots show the distribution of final fitness values, while the radar charts report the function-wise ranks. ECO maintains narrow result distributions and the lowest Friedman mean rank across the four dimensions, indicating consistent solution quality as the dimension increases.</p>
+        <figure class="article-figure figure-wide">
+          <img src="assets/eco_bar.png" alt="Friedman mean ranks of ECO and five competing algorithms across four dimensions">
+          <figcaption>Fig. 7. Friedman mean ranks on the CEC-2020 test suite.</figcaption>
+        </figure>
+        <figure class="article-figure figure-wide">
+          <img src="assets/eco_box.png" alt="Fitness distributions of ECO and five competing algorithms on CEC-2020 functions">
+          <figcaption>Fig. 8. Fitness-value distributions on representative CEC-2020 functions.</figcaption>
+        </figure>
+        <figure class="article-figure figure-wide">
+          <img src="assets/eco_radar.png" alt="Function-wise ranks of ECO and five competing algorithms across CEC-2020 dimensions">
+          <figcaption>Fig. 9. Function-wise rank profiles across CEC-2020 dimensions.</figcaption>
+        </figure>
+      </section>
+      <section class="article-section">
+        <h2>Convergence behaviour</h2>
+        <p>The convergence curves compare the average best fitness against the number of function evaluations. ECO typically performs broad early exploration, followed by adaptive refinement and stronger late-stage exploitation, which helps it retain competitive convergence on functions with different landscape structures.</p>
+        <figure class="article-figure figure-wide">
+          <img src="assets/eco_convergence.png" alt="Convergence curves of ECO and competing algorithms on CEC-2020 functions">
+          <figcaption>Fig. 10. Convergence comparison on representative CEC-2020 functions.</figcaption>
+        </figure>
+      </section>
+      <section class="article-section">
+        <h2>Qualitative search analysis</h2>
+        <p>The qualitative results visualize objective landscapes, search histories, best and average fitness, solution trajectories, and the exploration--exploitation balance. They illustrate how ECO combines population diversity in the early search with focused refinement near promising regions in later iterations.</p>
+        <figure class="article-figure figure-wide">
+          <img src="assets/eco_qualitative.png" alt="Qualitative visualization of ECO search behaviour on representative functions">
+          <figcaption>Fig. 11. Qualitative analysis of ECO search behaviour.</figcaption>
+        </figure>
       </section>
       <section class="article-section">
         <h2>Engineering validation</h2>
         <p>Five representative constrained design problems from <a class="benchmark-link" href="https://github.com/P-N-Suganthan/2020-RW-Constrained-Optimisation" target="_blank" rel="noreferrer">CEC-2020-RW</a> are used to evaluate practical applicability: speed reducer design, tension/compression spring design, welded beam design, three-bar truss design, and gear train design.</p>
-        <p>These problems include coupled variables, engineering constraints, and different objective landscapes. They complement the numerical benchmarks by examining whether ECO can produce competitive feasible designs in application-oriented settings.</p>
+        <p>These problems include coupled variables, engineering constraints, and different objective landscapes. ECO attains the best overall rank among the evaluated algorithms, complementing the numerical tests with application-oriented validation.</p>
       </section>
       </div>
       <div class="resource-band" aria-label="Resources">
