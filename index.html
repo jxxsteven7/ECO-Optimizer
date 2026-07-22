@@ -24,7 +24,7 @@
   </header>
 
   <main id="top">
-    <section class="hero page-section" aria-labelledby="hero-title">
+    <section class="hero page-section is-active-page" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Nature-inspired global optimization</p>
         <h1 id="hero-title">Ecological<br><em>Cycle</em> Optimizer</h1>
@@ -121,13 +121,12 @@
   year    = {2025}
 }</code></pre>
       </div>
+      <footer>
+        <p>© 2025 ECO Project</p>
+        <p>Built for open research · <a href="mailto:jxxsteven7@gmail.com">jxxsteven7@gmail.com</a></p>
+      </footer>
     </section>
   </main>
-
-  <footer>
-    <p>© 2025 ECO Project</p>
-    <p>Built for open research · <a href="mailto:jxxsteven7@gmail.com">jxxsteven7@gmail.com</a></p>
-  </footer>
 
   <script>
     const button = document.querySelector('.copy-button');
@@ -139,24 +138,46 @@
     });
 
     const navLinks = [...document.querySelectorAll('nav a')];
-    const sections = navLinks
-      .map((link) => document.querySelector(link.getAttribute('href')))
-      .filter(Boolean);
+    const pages = [...document.querySelectorAll('.page-section')];
+    const homePage = document.querySelector('.hero');
+    const homeLink = document.querySelector('.brand');
 
-    const setActiveLink = (sectionId) => {
-      navLinks.forEach((link) => {
-        link.classList.toggle('is-active', link.getAttribute('href') === `#${sectionId}`);
+    const showPage = (sectionId, updateHistory = true) => {
+      const targetPage = sectionId ? document.getElementById(sectionId) : homePage;
+      if (!targetPage) return;
+
+      pages.forEach((page) => {
+        page.classList.toggle('is-active-page', page === targetPage);
       });
+      navLinks.forEach((link) => {
+        const isCurrent = link.getAttribute('href') === `#${sectionId}`;
+        link.classList.toggle('is-active', isCurrent);
+        link.toggleAttribute('aria-current', isCurrent);
+      });
+
+      if (updateHistory) {
+        const targetUrl = sectionId ? `#${sectionId}` : window.location.pathname;
+        window.history.pushState(null, '', targetUrl);
+      }
     };
 
-    const sectionObserver = new IntersectionObserver((entries) => {
-      const visibleEntry = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visibleEntry) setActiveLink(visibleEntry.target.id);
-    }, { threshold: [0.5, 0.7] });
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        showPage(link.getAttribute('href').slice(1));
+      });
+    });
 
-    sections.forEach((section) => sectionObserver.observe(section));
+    homeLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      showPage('');
+    });
+
+    window.addEventListener('popstate', () => {
+      showPage(window.location.hash.slice(1), false);
+    });
+
+    showPage(window.location.hash.slice(1), false);
   </script>
 </body>
 </html>

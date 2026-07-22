@@ -12,19 +12,18 @@
 }
 
 * { box-sizing: border-box; }
-html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 80px;
-}
+html { scroll-behavior: auto; }
 body {
   margin: 0;
+  min-height: 100svh;
+  overflow: hidden;
   background: var(--paper);
   color: var(--ink);
   font-family: "Manrope", sans-serif;
   line-height: 1.55;
 }
 a { color: inherit; text-decoration: none; }
+main { height: calc(100svh - 80px); overflow: hidden; }
 
 .site-header {
   width: min(1240px, calc(100% - 64px));
@@ -90,9 +89,16 @@ h1 em, h2 em { color: var(--clay); font-weight: 600; }
 .label-exploit { right: 5%; bottom: 19%; }
 .figure-note { position: absolute; z-index: 3; right: 0; bottom: 1%; width: 170px; margin: 0; font-family: "DM Mono", monospace; font-size: .62rem; line-height: 1.5; }
 
-.page-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+.page-section { display: none; }
+.page-section.is-active-page { animation: panel-enter .42s ease both; }
+.hero.is-active-page,
+.statement.is-active-page,
+.evaluation.is-active-page,
+.citation.is-active-page { display: grid; }
+.mechanisms.is-active-page { display: flex; }
+@keyframes panel-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .statement, .mechanisms, .evaluation, .citation { width: min(1240px, calc(100% - 64px)); margin: 0 auto; }
 .statement {
@@ -174,12 +180,12 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
 .citation pre { margin: 0; overflow-x: auto; color: var(--ink-strong); font-family: "DM Mono", monospace; font-size: .72rem; line-height: 1.75; white-space: pre-wrap; }
 .copy-button { position: absolute; top: 13px; right: 13px; padding: 7px 9px; color: var(--ink); background: transparent; border: 1px solid rgba(24, 61, 54, .45); font-family: "DM Mono", monospace; font-size: .64rem; cursor: pointer; }
 
-footer { display: flex; justify-content: space-between; width: min(1240px, calc(100% - 64px)); margin: 0 auto; padding: 25px 0 35px; border-top: 1px solid var(--line); color: var(--body); font-family: "DM Mono", monospace; font-size: .67rem; }
+footer { grid-column: 1 / -1; display: flex; justify-content: space-between; width: 100%; margin-top: 30px; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--body); font-family: "DM Mono", monospace; font-size: .67rem; }
 footer p { margin: 0; }
 footer a { color: var(--clay); }
 
 @media (max-width: 820px) {
-  html { scroll-snap-type: y proximity; }
+  main { overflow-y: auto; }
   .site-header { width: min(100% - 36px, 1240px); }
   nav { display: none; }
   .hero { grid-template-columns: 1fr; width: min(100% - 36px, 1240px); min-height: 0; padding: 66px 0 54px; }
@@ -194,5 +200,9 @@ footer a { color: var(--clay); }
   .mechanism-card h3 { margin-top: 42px; }
   .resource-band { align-items: flex-start; flex-direction: column; padding: 36px 18px; }
   .resource-band div { justify-content: flex-start; }
-  footer { width: min(100% - 36px, 1240px); flex-direction: column; gap: 9px; }
+  footer { flex-direction: column; gap: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-section.is-active-page { animation: none; }
 }
