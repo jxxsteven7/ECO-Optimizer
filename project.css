@@ -331,7 +331,7 @@ footer a { color: var(--clay); }
 }
 .article-section em { color: var(--ink); font-style: normal; font-weight: 600; }
 .article-figure { margin: 22px 0 0; }
-.article-figure img { display: block; width: 100%; height: auto; background: var(--paper-bright); }
+.article-figure img { display: block; width: 100%; height: auto; background: transparent; }
 .article-figure.figure-medium { max-width: 620px; }
 .article-figure.figure-wide { max-width: 820px; }
 .method-visuals { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 22px; margin-top: 22px; }
