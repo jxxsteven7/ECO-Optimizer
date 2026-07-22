@@ -108,6 +108,21 @@
         </section>
 
         <section class="article-section">
+          <h2>Consumer-prey dynamics</h2>
+          <p>The predation factor determines the consumer-prey relationship and changes during the search. This mechanism adjusts the balance between exploration and exploitation as the iteration progresses.</p>
+          <div class="method-visuals">
+            <figure>
+              <img src="assets/eco_exp_param.png" alt="Consumer-prey relationship governed by the predation factor">
+              <figcaption>Fig. 2. Consumer-prey relationship used in ECO.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/eco_exp_it.png" alt="Iteration-dependent variation of the ECO predation factor">
+              <figcaption>Fig. 3. Iteration-dependent variation of the predation factor.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="article-section">
           <h2>Decomposer strategy</h2>
           <p>After each ecological cycle, decomposers recycle information through optimal, local-random, and global-random decomposition. These mechanisms retain useful information while introducing new search directions when needed.</p>
         </section>
@@ -117,7 +132,7 @@
           <p>At every iteration, the population undergoes ecological interaction, decomposition, and selection. Improved individuals are retained, and the process continues until the available function evaluations are exhausted.</p>
           <figure class="article-figure figure-wide">
             <img src="assets/eco_flowchart.png" alt="Flowchart of the ECO optimization workflow">
-            <figcaption>Fig. 2. Main workflow of the Ecological Cycle Optimizer.</figcaption>
+            <figcaption>Fig. 4. Main workflow of the Ecological Cycle Optimizer.</figcaption>
           </figure>
         </section>
       </div>

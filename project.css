@@ -334,8 +334,12 @@ footer a { color: var(--clay); }
 .article-figure img { display: block; width: 100%; height: auto; background: var(--paper-bright); }
 .article-figure.figure-medium { max-width: 620px; }
 .article-figure.figure-wide { max-width: 820px; }
+.method-visuals { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 22px; margin-top: 22px; }
+.method-visuals figure { margin: 0; }
+.method-visuals img { display: block; width: 100%; height: auto; }
 .article-figure figcaption,
-.experiment-visuals figcaption {
+.experiment-visuals figcaption,
+.method-visuals figcaption {
   margin-top: 7px;
   color: var(--body);
   font-family: "DM Mono", monospace;
@@ -364,6 +368,7 @@ footer a { color: var(--clay); }
   .article-intro p, .article-section p { font-size: .9rem; }
   .article-section { margin-bottom: 34px; }
   .content-page .experiment-visuals { grid-template-columns: 1fr; }
+  .method-visuals { grid-template-columns: 1fr; }
 }
 @keyframes panel-enter {
   from { opacity: 0; transform: translateY(16px); }
