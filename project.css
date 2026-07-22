@@ -354,7 +354,7 @@ footer a { color: var(--clay); }
   margin: 22px 0 0;
 }
 .content-page .experiment-visuals figure { margin: 0; border: 0; background: transparent; overflow: visible; }
-.content-page .experiment-visuals img { display: block; width: 100%; height: auto; border: 1px solid var(--line); object-fit: contain; }
+.content-page .experiment-visuals img { display: block; width: 100%; height: auto; border: 0; object-fit: contain; }
 .content-page .experiment-visuals figcaption { padding: 0; }
 
 @media (max-width: 820px) {
