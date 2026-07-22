@@ -287,6 +287,10 @@ footer a { color: var(--clay); }
   width: min(880px, calc(100% - 64px));
   margin: 0 auto;
 }
+.content-page .section-index {
+  margin: 0 0 18px;
+  color: var(--clay);
+}
 .article-intro {
   margin-bottom: 38px;
   padding-bottom: 20px;
