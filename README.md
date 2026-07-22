@@ -22,7 +22,8 @@
 
 ![Ecological relationships used by ECO](assets/eco_ecosystem.jpg)
 
-## Contents
+<a id="contents"></a>
+## 📚 Contents
 
 - [Overview](#overview)
 - [Method at a Glance](#method-at-a-glance)
@@ -35,7 +36,8 @@
 - [Citation](#citation)
 - [Contact](#contact)
 
-## Overview
+<a id="overview"></a>
+## 🌍 Overview
 
 ECO models an optimization population as an ecological system. Its design is inspired by energy flow and material cycling among producers, consumers, decomposers, and nutrients. The algorithm combines complementary update mechanisms to maintain a dynamic balance between global exploration and local exploitation.
 
@@ -44,7 +46,8 @@ The codebase provides two MATLAB implementations:
 - **`ECO for FEs`**: uses a maximum number of function evaluations (`MaxFEs`) as the termination criterion. Use this version for CEC-style comparisons with an evaluation-budget criterion.
 - **`ECO for iterations`**: uses a maximum number of iterations (`Max_it`) as the termination criterion. Use this version for iteration-based experiments or direct applications.
 
-## Method at a Glance
+<a id="method-at-a-glance"></a>
+## 🧬 Method at a Glance
 
 Each iteration includes the following ecological roles:
 
@@ -67,7 +70,8 @@ P_loc = 0.6;
 
 `P_opt` controls optimal decomposition. When random decomposition is selected, `P_loc` controls the preference for local rather than global random decomposition.
 
-## Repository Structure
+<a id="repository-structure"></a>
+## 🗂️ Repository Structure
 
 ```text
 ECO-Optimizer/
@@ -91,12 +95,14 @@ ECO-Optimizer/
 `-- README.md
 ```
 
-## Requirements
+<a id="requirements"></a>
+## 🛠️ Requirements
 
 - MATLAB R2023a (the code was developed in MATLAB R2023a).
 - No additional MATLAB toolbox is required by the provided benchmark scripts.
 
-## Quick Start
+<a id="quick-start"></a>
+## 🚀 Quick Start
 
 Clone the repository:
 
@@ -121,7 +127,8 @@ run('main.m');
 
 The scripts automatically create a local `results/` directory and process the 23 classic benchmark functions (`F1`--`F23`).
 
-## Reproducing the Included Benchmark Runs
+<a id="reproducing-the-included-benchmark-runs"></a>
+## 🔁 Reproducing the Included Benchmark Runs
 
 ### Function-evaluation version
 
@@ -167,7 +174,8 @@ For every function, both scripts write the following CSV files to their own `res
 
 The MATLAB command window also reports the minimum, mean, and standard deviation of the final fitness values.
 
-## Using ECO on a Custom Problem
+<a id="using-eco-on-a-custom-problem"></a>
+## 🧩 Using ECO on a Custom Problem
 
 1. Define an objective function with the signature `fobj(x)`, where `x` is a row vector.
 2. Specify the lower bound `Low`, upper bound `Up`, and dimension `dim`.
@@ -187,7 +195,8 @@ dim = 30;
 
 To add benchmark functions to the supplied scripts, update `Get_BenchFunctions.m` and add the corresponding identifier to `Function_list` in `main.m`.
 
-## Experimental Scope in the Paper
+<a id="experimental-scope-in-the-paper"></a>
+## 📊 Experimental Scope in the Paper
 
 The paper evaluates ECO in three stages:
 
@@ -197,7 +206,8 @@ The paper evaluates ECO in three stages:
 
 For methodological details, experimental settings, and complete results, please see the [paper](https://arxiv.org/abs/2508.20458) and the [project page](https://jxxsteven7.github.io/ECO-Optimizer/).
 
-## Citation
+<a id="citation"></a>
+## 📖 Citation
 
 If you use ECO or this implementation in your research, please cite:
 
@@ -210,7 +220,8 @@ If you use ECO or this implementation in your research, please cite:
 }
 ```
 
-## Contact
+<a id="contact"></a>
+## ✉️ Contact
 
 For questions about the algorithm, implementation, or research collaboration, contact:
 
