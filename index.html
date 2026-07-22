@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ecological Cycle Optimizer (ECO): a nature-inspired metaheuristic for global optimization.">
+  <meta name="theme-color" content="#183d36">
+  <title>Ecological Cycle Optimizer | ECO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ECO home"><span class="brand-mark">E</span><span>ECO</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#overview">Overview</a>
+      <a href="#method">Method</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="#citation">Citation</a>
+    </nav>
+    <a class="header-code" href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Nature-inspired global optimization</p>
+        <h1 id="hero-title">Ecological<br><em>Cycle</em> Optimizer</h1>
+        <p class="hero-intro">A metaheuristic optimizer that models ecological energy flow and material cycling to coordinate exploration and exploitation during global search.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://arxiv.org/abs/2508.20458" target="_blank" rel="noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">View code <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="authors">Boyu Ma<sup>*</sup>, Jiaxiao Shi<sup>*</sup>, Yiming Ji, and Zhengpu Wang<br><span>State Key Laboratory of Robotics and Systems, Harbin Institute of Technology</span></p>
+      </div>
+      <div class="hero-art" aria-label="Ecological search dynamics illustration">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="art-label label-explore">explore</div>
+        <div class="art-label label-exploit">exploit</div>
+        <img src="assets/Ecosystem.jpg" alt="Illustration of the ecological cycle inspiration behind ECO">
+        <p class="figure-note">Ecological cycling provides a dynamic search metaphor.</p>
+      </div>
+    </section>
+
+    <section class="statement" id="overview" aria-labelledby="overview-title">
+      <p class="section-index">01 / Overview</p>
+      <div>
+        <h2 id="overview-title">Search as a living<br>system of <em>exchange.</em></h2>
+        <p>ECO views a population as an ecological system rather than a collection of independent search agents. Energy flow directs useful information through the population, while material cycling renews diversity and preserves the capacity to escape local optima.</p>
+      </div>
+    </section>
+
+    <section class="mechanisms" id="method" aria-labelledby="method-title">
+      <div class="section-heading">
+        <p class="section-index">02 / Method</p>
+        <h2 id="method-title">Three ecological roles,<br>one coordinated search.</h2>
+      </div>
+      <div class="mechanism-grid">
+        <article class="mechanism-card producer">
+          <span class="card-number">01</span>
+          <h3>Producers</h3>
+          <p>Generate and distribute candidate information, providing broad search directions for population evolution.</p>
+          <span class="role-tag">Information supply</span>
+        </article>
+        <article class="mechanism-card consumer">
+          <span class="card-number">02</span>
+          <h3>Consumers</h3>
+          <p>Herbivores, carnivores, and omnivores apply distinct predation behaviours to refine and diversify the search.</p>
+          <span class="role-tag">Adaptive interaction</span>
+        </article>
+        <article class="mechanism-card decomposer">
+          <span class="card-number">03</span>
+          <h3>Decomposers</h3>
+          <p>Recycle population information through optimal, local-random, and global-random decomposition mechanisms.</p>
+          <span class="role-tag">Diversity renewal</span>
+        </article>
+      </div>
+      <div class="method-footnote">
+        <span class="pulse-dot"></span>
+        <p>The roles are designed to maintain a dynamic balance between global exploration and local exploitation throughout the optimization process.</p>
+      </div>
+    </section>
+
+    <section class="evaluation" id="evaluation" aria-labelledby="evaluation-title">
+      <div class="evaluation-copy">
+        <p class="section-index">03 / Evaluation</p>
+        <h2 id="evaluation-title">Designed for broad<br>optimization settings.</h2>
+        <p>Experiments examine parameter sensitivity, numerical optimization performance, and constrained engineering applications. The assessment spans classical functions, the IEEE CEC benchmark suites, and real-world design problems.</p>
+        <a class="text-link" href="https://arxiv.org/abs/2508.20458" target="_blank" rel="noreferrer">Explore the full experimental study <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="metric-list" role="list" aria-label="Evaluation scope">
+        <div class="metric" role="listitem"><strong>23</strong><span>classic optimization functions</span></div>
+        <div class="metric" role="listitem"><strong>3</strong><span>IEEE CEC numerical benchmark suites</span></div>
+        <div class="metric" role="listitem"><strong>5</strong><span>real-world engineering design problems</span></div>
+      </div>
+    </section>
+
+    <section class="resource-band" aria-label="Resources">
+      <p>Ready to experiment with ECO?</p>
+      <div>
+        <a href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">Source code <span aria-hidden="true">↗</span></a>
+        <a href="https://arxiv.org/abs/2508.20458" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+        <a href="mailto:jxxsteven7@gmail.com">Contact <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="citation" id="citation" aria-labelledby="citation-title">
+      <div>
+        <p class="section-index">04 / Citation</p>
+        <h2 id="citation-title">If ECO supports your work,<br>please cite the paper.</h2>
+      </div>
+      <div class="citation-box">
+        <button class="copy-button" type="button" data-copy-target="bibtex">Copy BibTeX</button>
+        <pre id="bibtex"><code>@article{ma2025eco,
+  title   = {Ecological Cycle Optimizer: A Novel Nature-Inspired
+             Metaheuristic Algorithm for Global Optimization},
+  author  = {Ma, Boyu and Shi, Jiaxiao and Ji, Yiming and Wang, Zhengpu},
+  journal = {arXiv preprint arXiv:2508.20458},
+  year    = {2025}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ECO Project</p>
+    <p>Built for open research · <a href="mailto:jxxsteven7@gmail.com">jxxsteven7@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const button = document.querySelector('.copy-button');
+    button.addEventListener('click', async () => {
+      const text = document.querySelector('#bibtex').innerText;
+      await navigator.clipboard.writeText(text);
+      button.textContent = 'Copied';
+      setTimeout(() => { button.textContent = 'Copy BibTeX'; }, 1600);
+    });
+  </script>
+</body>
+</html>
