@@ -394,6 +394,18 @@
           <p>The source code, benchmark settings, figures, and supporting materials are provided to make ECO easier to inspect and reproduce. We welcome feedback, extensions, and independent comparisons using the same evaluation protocol.</p>
           <p>If ECO is useful for your research, please consider giving the <a class="benchmark-link" href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">ECO-Optimizer repository</a> a star <span class="star-mark" aria-label="star">&#9733;</span>. A star helps other researchers discover the implementation and supports the continued maintenance of the project.</p>
         </section>
+        <section class="article-section">
+          <h2>BibTeX</h2>
+          <div class="citation-box">
+            <button class="copy-button" type="button">Copy BibTeX</button>
+            <pre id="bibtex"><code>@article{2026eco,
+  title   = {Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization},
+  author  = {Boyu Ma and Jiaxiao Shi and Yiming Ji and Zhengpu Wang},
+  journal = {arXiv preprint arXiv:2508.20458},
+  year    = {2026}
+}</code></pre>
+          </div>
+        </section>
         <section class="article-section citation-contact">
           <h2>Contact</h2>
           <p>For questions about ECO, its implementation, or research collaboration, please contact <a class="benchmark-link" href="mailto:boyu.ma@ntu.edu.sg">Boyu Ma</a> or <a class="benchmark-link" href="mailto:jiaxiao.shi@ntu.edu.sg">Jiaxiao Shi</a>.</p>
@@ -407,6 +419,16 @@
   </main>
 
   <script>
+    const button = document.querySelector('.copy-button');
+    if (button) {
+      button.addEventListener('click', async () => {
+        const text = document.querySelector('#bibtex').innerText;
+        await navigator.clipboard.writeText(text);
+        button.textContent = 'Copied';
+        setTimeout(() => { button.textContent = 'Copy BibTeX'; }, 1600);
+      });
+    }
+
     const navLinks = [...document.querySelectorAll('nav a')];
     const pages = [...document.querySelectorAll('.page-section')];
     const homePage = document.querySelector('.hero');
