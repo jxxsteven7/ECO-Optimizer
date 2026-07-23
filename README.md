@@ -15,7 +15,7 @@
   <a href="https://www.mathworks.com/matlabcentral/fileexchange/180852-ecological-cycle-optimizer-eco">MATLAB File Exchange</a>
 </p> -->
 
-<a href="https://ma-boyu.github.io/"><strong>Boyu Ma</strong></a><sup>1,2,&#42;</sup>, <a href="https://github.com/jxxsteven7"><strong>Jiaxiao Shi</strong></a><sup>1,2,&#42;</sup>, <a href="https://scholar.google.com/citations?user=hVKAr7YAAAAJ&amp;hl=zh-CN"><strong>Yiming Ji</strong></a><sup>1</sup>, and <a href="https://www.researchgate.net/scientific-contributions/Zhengpu-Wang-2228862425"><strong>Zhengpu Wang</strong></a><sup>1</sup>
+<a href="https://ma-boyu.github.io/"><strong>Boyu Ma</strong></a><sup>1,2,&#42;</sup>, <a href="https://github.com/jxxsteven7"><strong>Jiaxiao Shi</strong></a><sup>1,2,&#42;</sup>, <a href="https://scholar.google.com/citations?user=hVKAr7YAAAAJ&amp;hl=zh-CN"><strong>Yiming Ji</strong></a><sup>1</sup>, and <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=BZoyZx4AAAAJ"><strong>Zhengpu Wang</strong></a><sup>1</sup>
 
 <sup>1</sup> State Key Laboratory of Robotics and Systems, Harbin Institute of Technology, China<br>
 <sup>2</sup> School of Mechanical and Aerospace Engineering, Nanyang Technological University, Singapore<br>
