@@ -338,6 +338,7 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   padding: 22px 0 26px;
   border-bottom: 1px solid var(--line);
 }
+.home-analytics { grid-column: 1 / -1; }
 .analytics-heading { margin-bottom: 16px; }
 .analytics-heading h2 {
   margin: 0 0 8px;
