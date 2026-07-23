@@ -358,13 +358,13 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
 .article-section em { color: var(--ink); font-style: normal; font-weight: 600; }
 .analytics-panel { margin: 0 0 30px; padding: 22px 0 0; }
 .home-analytics { grid-column: 1 / -1; }
-.analytics-panel iframe {
-  display: block;
-  width: 100%;
-  min-height: 600px;
-  border: 0;
+.visitor-map {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   background: transparent;
-  mix-blend-mode: multiply;
 }
 .article-figure { margin: 22px 0 0; }
 .article-figure img { display: block; width: 100%; height: auto; background: transparent; }
@@ -417,7 +417,7 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   .article-intro { margin-bottom: 30px; }
   .article-intro p, .article-section p { font-size: .9rem; }
   .article-section { margin-bottom: 34px; }
-  .analytics-panel iframe { min-height: 560px; }
+  .visitor-map { min-height: 180px; }
   .content-page .experiment-visuals { grid-template-columns: 1fr; }
   .engineering-case { grid-template-columns: 1fr; }
   .engineering-results table { font-size: clamp(.42rem, 1.3vw, .58rem); }
