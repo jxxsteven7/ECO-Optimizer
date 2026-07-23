@@ -333,6 +333,32 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   line-height: 1.7;
 }
 .article-section em { color: var(--ink); font-style: normal; font-weight: 600; }
+.analytics-panel {
+  margin: 0 0 42px;
+  padding: 22px 0 26px;
+  border-bottom: 1px solid var(--line);
+}
+.analytics-heading { margin-bottom: 16px; }
+.analytics-heading h2 {
+  margin: 0 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+.analytics-heading p {
+  margin: 0;
+  color: var(--body);
+  font-size: .88rem;
+  line-height: 1.6;
+}
+.analytics-panel iframe {
+  display: block;
+  width: 100%;
+  min-height: 760px;
+  border: 0;
+  background: transparent;
+}
 .article-figure { margin: 22px 0 0; }
 .article-figure img { display: block; width: 100%; height: auto; background: transparent; }
 .article-figure.figure-medium { max-width: 620px; }
@@ -384,6 +410,7 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   .article-intro { margin-bottom: 30px; }
   .article-intro p, .article-section p { font-size: .9rem; }
   .article-section { margin-bottom: 34px; }
+  .analytics-panel iframe { min-height: 680px; }
   .content-page .experiment-visuals { grid-template-columns: 1fr; }
   .engineering-case { grid-template-columns: 1fr; }
   .engineering-results table { font-size: clamp(.42rem, 1.3vw, .58rem); }
