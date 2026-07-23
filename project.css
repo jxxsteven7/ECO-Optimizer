@@ -385,6 +385,8 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   text-transform: uppercase;
 }
 .visitor-map {
+  width: min(760px, 100%);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
