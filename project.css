@@ -305,6 +305,12 @@ h2 { font-size: clamp(2.6rem, 4.1vw, 4.8rem); }
   scrollbar-width: none;
   padding: 48px 0 76px;
 }
+.citation.is-active-page {
+  display: block;
+  height: auto;
+  min-height: calc(100svh - 80px);
+  overflow: visible;
+}
 .content-page.is-active-page::-webkit-scrollbar { display: none; }
 .article-page {
   width: min(880px, calc(100% - 64px));
