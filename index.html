@@ -55,7 +55,7 @@
       <a href="#overview">Overview</a>
       <a href="#method">Method</a>
       <a href="#experiments">Experiments</a>
-      <a href="#citation">Citation</a>
+      <a href="#acknowledgment">Acknowledgment</a>
     </nav>
     <a class="header-code" href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
   </header>
@@ -376,23 +376,22 @@
       </footer>
     </section>
 
-    <section class="citation page-section content-page" id="citation" aria-labelledby="citation-title">
+    <section class="citation page-section content-page" id="acknowledgment" aria-labelledby="acknowledgment-title">
       <div class="article-page">
-        <p class="section-index">04 / Citation</p>
+        <p class="section-index">04 / Acknowledgment</p>
         <div class="article-intro">
-          <p>If ECO is useful for your research, please cite the paper below. The BibTeX record can be copied directly for use in your manuscript.</p>
+          <p>This page acknowledges the contributions behind ECO and provides practical ways to support and reuse the project.</p>
         </div>
         <section class="article-section">
-          <h2 id="citation-title">BibTeX</h2>
-          <div class="citation-box">
-        <button class="copy-button" type="button" data-copy-target="bibtex">Copy BibTeX</button>
-        <pre id="bibtex"><code> @article{2026eco,
-  title   = {Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization},
-  author  = {Boyu Ma, Jiaxiao Shi, Yiming Ji and Zhengpu Wang},
-  journal = {arXiv preprint arXiv:2508.20458},
-  year    = {2026}
-}</code></pre>
-          </div>
+          <h2 id="acknowledgment-title">Author contributions</h2>
+          <p><a class="benchmark-link" href="https://ma-boyu.github.io/" target="_blank" rel="noreferrer">Boyu Ma</a> and <a class="benchmark-link" href="https://github.com/jxxsteven7" target="_blank" rel="noreferrer">Jiaxiao Shi</a> contributed equally to this work. Boyu Ma contributed to the conceptualization, methodology, and development of the ECO algorithm.</p>
+          <p>Jiaxiao Shi contributed to software implementation, experimental design, data analysis, visualization, and manuscript preparation. <a class="benchmark-link" href="https://scholar.google.com/citations?user=hVKAr7YAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Yiming Ji</a> contributed to benchmark preparation, result verification, and experimental evaluation.</p>
+          <p><a class="benchmark-link" href="https://www.researchgate.net/scientific-contributions/Zhengpu-Wang-2228862425" target="_blank" rel="noreferrer">Zhengpu Wang</a> contributed to supervision, technical review, and guidance on the research direction. All authors reviewed the results and approved the final presentation of the project.</p>
+        </section>
+        <section class="article-section">
+          <h2>Open research</h2>
+          <p>The source code, benchmark settings, figures, and supporting materials are provided to make ECO easier to inspect and reproduce. We welcome feedback, extensions, and independent comparisons using the same evaluation protocol.</p>
+          <p>If ECO is useful for your research, please consider giving the <a class="benchmark-link" href="https://github.com/jxxsteven7/ECO-Optimizer" target="_blank" rel="noreferrer">ECO-Optimizer repository</a> a star <span class="star-mark" aria-label="star">&#9733;</span>. A star helps other researchers discover the implementation and supports the continued maintenance of the project.</p>
         </section>
         <section class="article-section citation-contact">
           <h2>Contact</h2>
@@ -407,14 +406,6 @@
   </main>
 
   <script>
-    const button = document.querySelector('.copy-button');
-    button.addEventListener('click', async () => {
-      const text = document.querySelector('#bibtex').innerText;
-      await navigator.clipboard.writeText(text);
-      button.textContent = 'Copied';
-      setTimeout(() => { button.textContent = 'Copy BibTeX'; }, 1600);
-    });
-
     const navLinks = [...document.querySelectorAll('nav a')];
     const pages = [...document.querySelectorAll('.page-section')];
     const homePage = document.querySelector('.hero');

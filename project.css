@@ -25,6 +25,7 @@ body {
 a { color: inherit; text-decoration: none; }
 .benchmark-link { color: var(--clay); border-bottom: 1px solid currentColor; }
 .benchmark-link:hover { color: var(--green); }
+.star-mark { color: var(--clay); font-size: 1.05em; }
 main { min-height: calc(100svh - 80px); overflow: visible; }
 
 .site-header {
